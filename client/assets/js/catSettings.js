@@ -7,13 +7,13 @@ var defaultDNA = {
     "eyesColor" : 16,
     "earsColor" : 42,
     //Cattributes
-    "eyesShape" : 7,
+    "eyesShape" : 1,
     "decorationPattern" : 1,
-    "decorationMidcolor" : 13,
-    "decorationSidescolor" : 13,
+    "decorationMidcolor" : 61,
+    "decorationSidescolor" : 69,
     "animation" :  1,
     "lastNum" :  1
-    }
+}
 
 // when page load
 $( document ).ready(function() {
@@ -63,6 +63,15 @@ function renderCat(dna){
 
     eyeVariation(shape, dna.eyesShape)
     $('#eyeshape').val(dna.eyesShape)
+
+    hairStyle(style, dna.decorationPattern)
+    $('#hairstyle').val(dna.decorationPattern)
+
+    middleHairColor(colors[dna.decorationMidcolor],dna.decorationMidcolor)
+    $('#hairColor1').val(dna.decorationMidcolor)
+
+    sidesHairColor(colors[dna.decorationSidescolor],dna.decorationSidescolor)
+    $('#hairColor2').val(dna.decorationSidescolor)
 }
 
 // Changing cat colors
@@ -86,7 +95,23 @@ $('#earscolor').change( () => {
   earColor(colors[colorVal], colorVal)
 })
 
+$('#hairColor1').change( () => {
+  var colorVal = $('#hairColor1').val()
+  middleHairColor(colors[colorVal], colorVal)
+})
+
+$('#hairColor2').change( () => {
+  var colorVal = $('#hairColor2').val()
+  sidesHairColor(colors[colorVal], colorVal)
+})
+
+//Changing cat designs
 $('#eyeshape').change( () => {
   var shape = parseInt($('#eyeshape').val())
   eyeVariation(shape)
+})
+
+$('#hairstyle').change( () => {
+  var style = parseInt($('#hairstyle').val())
+  hairStyle(style)
 })
