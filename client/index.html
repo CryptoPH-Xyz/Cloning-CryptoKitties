@@ -3,10 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Academy kitties </title>
-  <script type="text/javascript" src="assets/js/jquery-3.4.1.js"></script>
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <script src="assets/bootstrap/js/popper.js"></script>
-  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <link rel="stylesheet" href="assets/css/mystyle.css">
   <link rel="stylesheet" href="assets/css/animations.css">
@@ -96,55 +93,64 @@
                     </b>
                 </div>
             </div>
-            <div class="col-lg-7 cattributes m-2 light-b-shadow">
+            <div class="col-lg-7 cattributes m-2 light-b-shadow" id="parent">
+                <a class="btn btn-outline-info" data-toggle="collapse" href="#catColors" role="button" aria-expanded="true" aria-controls="catColors">Color Me!</a>
+                <a class="btn btn-outline-info collapsed ml-2" data-toggle="collapse" href="#cattributes" role="button" aria-expanded="false" aria-controls="cattributes">Cattributes</a>
+                <div class="collapse show mt-3" data-parent="#parent" id="catColors">
+                    <div class="form-group">
+                        <label for="formControlRange"><b>Head and body</b><span class="badge badge-dark ml-2" id="headcode"></span></label>
+                        <input type="range" min="10" max="98" class="form-control-range" id="bodycolor">
+                    </div>
 
-            <div id="catColors">
-                <div class="form-group">
-                    <label for="formControlRange"><b>Head and body</b><span class="badge badge-dark ml-2" id="headcode"></span></label>
-                    <input type="range" min="10" max="98" class="form-control-range" id="bodycolor">
+                    <div class="form-group">
+                        <label for="formControlRange"><b>Mouth | Belly | Inner Ears | Tail</b><span class="badge badge-dark ml-2" id="mouthcode"></span></label>
+                        <input type="range" min="10" max="98" class="form-control-range" id="mouthcolor">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="formControlRange"><b>Eyes | Tailend</b><span class="badge badge-dark ml-2" id="eyecode"></span></label>
+                        <input type="range" min="10" max="98" class="form-control-range" id="eyescolor">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="formControlRange"><b>Ears and Paws</b><span class="badge badge-dark ml-2" id="earcode"></span></label>
+                        <input type="range" min="10" max="98" class="form-control-range" id="earscolor">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="formControlRange"><b>Hair Color - middle</b><span class="badge badge-dark ml-2" id="middleHair"></span></label>
+                        <input type="range" min="10" max="98" class="form-control-range" id="hairColor1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="formControlRange"><b>Hair Color - sides</b><span class="badge badge-dark ml-2" id="sidesHair"></span></label>
+                        <input type="range" min="10" max="98" class="form-control-range" id="hairColor2">
+                    </div>
                 </div>
+            
+                <div class="collapse mt-3" data-parent="#parent" id="cattributes">
+                    <div class="form-group">
+                        <label for="formControlRange"><b>Eye shape</b><span class="badge badge-dark ml-2" id="eyeName"></span></label>
+                        <input type="range" min="1" max="7" class="form-control-range" id="eyeshape">
+                    </div>
 
-                <div class="form-group">
-                    <label for="formControlRange"><b>Mouth | Belly | Inner Ears | Tail</b><span class="badge badge-dark ml-2" id="mouthcode"></span></label>
-                    <input type="range" min="10" max="98" class="form-control-range" id="mouthcolor">
+                    <div class="form-group">
+                        <label for="formControlRange"><b>Hair Style</b><span class="badge badge-dark ml-2" id="hairName"></span></label>
+                        <input type="range" min="1" max="7" class="form-control-range" id="hairstyle">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="formControlRange"><b>Animations</b><span class="badge badge-dark ml-2" id="animationName"></span></label>
+                        <input type="range" min="1" max="6" class="form-control-range" id="animation">
+                    </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="formControlRange"><b>Eyes | Tailend</b><span class="badge badge-dark ml-2" id="eyecode"></span></label>
-                    <input type="range" min="10" max="98" class="form-control-range" id="eyescolor">
+                <div class="navbar justify-content-between">
+                    <div>
+                        <button id="random" type="button" class="btn btn-outline-dark">Random Kitty</button>
+                        <button id="default" type="button" class="btn btn-outline-dark ml-2">Default Kitty</button>
+                    </div>
+                    <button class="btn btn-success my-2 my-sm-0">Create Kitty</button>
                 </div>
-
-                <div class="form-group">
-                    <label for="formControlRange"><b>Ears and Paws</b><span class="badge badge-dark ml-2" id="earcode"></span></label>
-                    <input type="range" min="10" max="98" class="form-control-range" id="earscolor">
-                </div>
-
-                <div class="form-group">
-                    <label for="formControlRange"><b>Eye shape</b><span class="badge badge-dark ml-2" id="eyeName"></span></label>
-                    <input type="range" min="1" max="7" class="form-control-range" id="eyeshape">
-                </div>
-
-                <div class="form-group">
-                    <label for="formControlRange"><b>Hair Style</b><span class="badge badge-dark ml-2" id="hairName"></span></label>
-                    <input type="range" min="1" max="7" class="form-control-range" id="hairstyle">
-                </div>
-
-                <div class="form-group">
-                    <label for="formControlRange"><b>Hair Color - middle</b><span class="badge badge-dark ml-2" id="middleHair"></span></label>
-                    <input type="range" min="10" max="98" class="form-control-range" id="hairColor1">
-                </div>
-
-                <div class="form-group">
-                    <label for="formControlRange"><b>Hair Color - sides</b><span class="badge badge-dark ml-2" id="sidesHair"></span></label>
-                    <input type="range" min="10" max="98" class="form-control-range" id="hairColor2">
-                </div>
-
-                <div class="form-group">
-                    <label for="formControlRange"><b>Animations</b><span class="badge badge-dark ml-2" id="animationName"></span></label>
-                    <input type="range" min="1" max="6" class="form-control-range" id="animation">
-                </div>
-            </div>
-
             </div>
 
             </div>
@@ -159,6 +165,9 @@
         <p>Project by Xyz Fiegalan | Ivan on Tech Academy (Student)</p>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
   <script src="assets/js/colors.js"></script>
   <script src="assets/js/catSettings.js"></script>
