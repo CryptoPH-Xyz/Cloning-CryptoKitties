@@ -1,0 +1,211 @@
+.movingHead{
+    animation: move 4s infinite;
+}
+
+@keyframes move {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(5deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(-5deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.leftEarwithHead{
+    animation: moveLeftEar 4s infinite;
+}
+
+@keyframes moveLeftEar {
+    0%{
+        transform: scale(-1, 1) rotate(0deg);
+    }
+    25%{
+        transform: scale(-1, 1) rotate(-5deg);
+    }
+    50%{
+        transform: scale(-1, 1) rotate(0deg);
+    }
+    75%{
+        transform: scale(-1, 1) rotate(5deg);
+    }
+    100%{
+        transform: scale(-1, 1) rotate(0deg);
+    }
+}
+
+.leftEarFast{
+    animation: leftOpposite 0.5s infinite;
+}
+
+@keyframes leftOpposite {
+    0%{
+        transform: scale(-1, 1) rotate(3deg);
+    }
+    50%{
+        transform: scale(-1, 1) rotate(-3deg);
+    }
+    100%{
+        transform: scale(-1, 1) rotate(3deg);
+    }
+}
+
+.rightEarFast{
+    animation: rightOpposite 0.5s infinite;
+}
+
+@keyframes rightOpposite {
+    0%{
+        transform: rotate(3deg);
+    }
+    50%{
+        transform: rotate(-3deg);
+    }
+    100%{
+        transform: rotate(3deg);
+    }
+}
+
+.movingTail{
+    animation: tail 0.2s infinite;
+}
+
+@keyframes tail {
+    0%{
+        transform: rotate(-43deg);
+    }
+    50%{
+        transform: rotate(-48deg);
+    }
+    100%{
+        transform: rotate(-43deg);
+    }
+}
+
+.headBop {
+    animation: bop 0.8s infinite;
+}
+
+@keyframes bop {
+    0%{
+        transform: translate(0px, 0px)
+    }
+    50%{
+        transform: translate(0px, 5px)
+    }
+    100%{
+        transform: translate(0px, 0px)
+    }
+}
+
+.faceZoom{
+    animation: zoom 2s infinite;
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(1)
+    }
+    50%{
+        transform: scale(1.15)
+    }
+    100%{
+        transform: scale(1)
+    }
+}
+
+.leftEyeGoofy{
+    animation: goofyEyesLeft 1.5s infinite;
+}
+
+@keyframes goofyEyesLeft {
+    0%{
+        left: 42px
+    }
+    25%{
+        left: 46px
+    }
+    50%{
+        left: 46px
+    }
+    75%{
+        left: 46px
+    }
+    100%{
+        left: 42px
+    }
+}
+
+.rightEyeGoofy{
+    animation: goofyEyesRight 1.5s infinite;
+}
+
+@keyframes goofyEyesRight {
+    0%{
+        left: 167px
+    }
+    25%{
+        left: 163px
+    }
+    50%{
+        left: 163px
+    }
+    75%{
+        left: 163px
+    }
+    100%{
+        left: 167px
+    }
+}
+
+.headTilt{
+    animation: tilt 1.5s infinite;
+}
+
+@keyframes tilt {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(-5deg);
+    }
+    50%{
+        transform: rotate(-5deg);
+    }
+    75%{
+        transform: rotate(-5deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.leftEarTilt{
+    animation: tiltLeftEar 1.5s infinite;
+}
+
+@keyframes tiltLeftEar {
+    0%{
+        transform: scale(-1, 1) rotate(0deg);
+    }
+    25%{
+        transform: scale(-1, 1) rotate(5deg);
+    }
+    50%{
+        transform: scale(-1, 1) rotate(5deg);
+    }
+    75%{
+        transform: scale(-1, 1) rotate(5deg);
+    }
+    100%{
+        transform: scale(-1, 1) rotate(0deg);
+    }
+}

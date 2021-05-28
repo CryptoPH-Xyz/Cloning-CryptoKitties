@@ -10,7 +10,7 @@ var defaultDNA = {
     "eyesShape" : 1,
     "decorationPattern" : 1,
     "decorationMidcolor" : 61,
-    "decorationSidescolor" : 69,
+    "decorationSidescolor" : 61,
     "animation" :  1,
     "lastNum" :  1
 }
@@ -50,7 +50,7 @@ function getDna(){
 
 function renderCat(dna){
     headColor(colors[dna.headcolor],dna.headcolor)
-    $('#bodycolor').val(dna.headcolor)
+    $('#bodycolor').val(dna.headcolor) //sets slider value
 
     mouthColor(colors[dna.mouthColor],dna.mouthColor)
     $('#bodycolor').val(dna.mouthColor)
@@ -61,10 +61,10 @@ function renderCat(dna){
     earColor(colors[dna.earsColor],dna.earsColor)
     $('#earscolor').val(dna.earsColor)
 
-    eyeVariation(shape, dna.eyesShape)
+    eyeVariation(dna.eyesShape)
     $('#eyeshape').val(dna.eyesShape)
 
-    hairStyle(style, dna.decorationPattern)
+    hairStyle(dna.decorationPattern)
     $('#hairstyle').val(dna.decorationPattern)
 
     middleHairColor(colors[dna.decorationMidcolor],dna.decorationMidcolor)
@@ -72,6 +72,9 @@ function renderCat(dna){
 
     sidesHairColor(colors[dna.decorationSidescolor],dna.decorationSidescolor)
     $('#hairColor2').val(dna.decorationSidescolor)
+
+    animationVariation(dna.animation)
+    $('#animation').val(dna.animation)
 }
 
 // Changing cat colors
@@ -114,4 +117,10 @@ $('#eyeshape').change( () => {
 $('#hairstyle').change( () => {
   var style = parseInt($('#hairstyle').val())
   hairStyle(style)
+})
+
+//Changing animation
+$('#animation').change( () => {
+  var animationVal = parseInt($('#animation').val())
+  animationVariation(animationVal)
 })

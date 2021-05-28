@@ -33,7 +33,7 @@ body {
     border-radius: 0 0 50% 50%;
 }
 
- .cat__head-dots_first {
+.cat__head-dots_first {
     position: absolute;
     content: '';
     top: 1px;
@@ -69,6 +69,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .cat__ear--left {
     transform: scale(-1, 1) rotate(170deg);
     left: -14px;
@@ -130,7 +131,7 @@ body {
     left: 42px;
 }
 .cat__eye span.pupil-right {
-    left: 166px;
+    left: 167px;
 }
 .cat__nose {
     position: absolute;

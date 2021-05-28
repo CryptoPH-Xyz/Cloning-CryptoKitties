@@ -63,31 +63,27 @@ function eyeVariation(num) {
             normalEyes()
             $('#eyeName').html('Chill')
             return eyesType1()
-            break
         case 3:
             normalEyes()
             $('#eyeName').html('Look Right')
             return eyesType2()
-            break
         case 4:
             normalEyes()
             $('#eyeName').html('Look Left')
             return eyesType3()
-            break
         case 5:
             normalEyes()
             $('#eyeName').html('Scary')
             return eyesType4()
-            break
         case 6:
             normalEyes()
             $('#eyeName').html('Cute1')
             return eyesType5()
-            break
         case 7:
             normalEyes()
             $('#eyeName').html('Cute2')
             return eyesType6()
+        default:
             break
     }
 }
@@ -132,13 +128,167 @@ function hairStyle(num) {
             $('#hairName').html('Basic')
             style1()
             break
+        case 2:
+            $('#hairName').html('Inverted')
+            style2()
+            break
+        case 3:
+            $('#hairName').html('Brush Up')
+            style3()
+            break
+        case 4:
+            $('#hairName').html('Mowhawk')
+            style4()
+            break
+        case 5:
+            $('#hairName').html('Long sides')
+            style5()
+            break
+        case 6:
+            $('#hairName').html('Side outs')
+            style6()
+            break
+        case 7:
+            $('#hairName').html('Long Middle')
+            style7()
+        default:
+            break
     }
 }
 
-    async function style1() {
+    function style1() {
         //Remove all style from other decorations
         //In this way we can also use style1() to reset the decoration style
         $('.cat__head-dots').css({ "transform": "rotate(0deg)", "height": "48px", "width": "14px", "top": "1px", "border-radius": "0 0 50% 50%" })
         $('.cat__head-dots_first').css({ "transform": "rotate(0deg)", "height": "35px", "width": "14px", "top": "1px", "border-radius": "50% 0 50% 50%" })
         $('.cat__head-dots_second').css({ "transform": "rotate(0deg)", "height": "35px", "width": "14px", "top": "1px", "border-radius": "0 50% 50% 50%" })
     }
+
+    function style2() {
+        $('.cat__head-dots').css({ "transform": "rotate(180deg)", "height": "48px", "width": "14px", "top": "1px", "border-radius": "0 0 50% 50%" })
+        $('.cat__head-dots_first').css({ "transform": "rotate(180deg)", "height": "35px", "width": "14px", "top": "1px", "border-radius": "50% 0 50% 50%" })
+        $('.cat__head-dots_second').css({ "transform": "rotate(180deg)", "height": "35px", "width": "14px", "top": "1px", "border-radius": "0 50% 50% 50%" })
+    }
+
+    function style3() {
+        $('.cat__head-dots').css({ "transform": "rotate(180deg)", "height": "48px", "width": "14px", "top": "-37px", "border-radius": "0 0 50% 50%" })
+        $('.cat__head-dots_first').css({ "transform": "rotate(0deg)", "height": "35px", "width": "14px", "top": "1px", "border-radius": "50% 0 50% 50%" })
+        $('.cat__head-dots_second').css({ "transform": "rotate(0deg)", "height": "35px", "width": "14px", "top": "1px", "border-radius": "0 50% 50% 50%" })
+    }
+
+    function style4() {
+        $('.cat__head-dots').css({ "transform": "rotate(180deg)", "height": "48px", "width": "14px", "top": "-30px", "border-radius": "0 0 50% 50%" })
+        $('.cat__head-dots_first').css({ "transform": "rotate(-15deg)", "height": "35px", "width": "14px", "top": "1px", "border-radius": "50% 0 50% 50%" })
+        $('.cat__head-dots_second').css({ "transform": "rotate(15deg)", "height": "35px", "width": "14px", "top": "1px", "border-radius": "0 50% 50% 50%" })
+    }
+
+    function style5() {
+        $('.cat__head-dots').css({ "transform": "rotate(180deg)", "height": "48px", "width": "14px", "top": "1px", "border-radius": "0 0 50% 50%" })
+        $('.cat__head-dots_first').css({ "transform": "rotate(10deg)", "height": "70px", "width": "14px", "top": "1px", "border-radius": "50% 0 50% 50%" })
+        $('.cat__head-dots_second').css({ "transform": "rotate(-10deg)", "height": "70px", "width": "14px", "top": "1px", "border-radius": "0 50% 50% 50%" })
+    }
+
+    function style6() {
+        $('.cat__head-dots').css({ "transform": "rotate(0)", "height": "48px", "width": "14px", "top": "1px", "border-radius": "0 0 50% 50%" })
+        $('.cat__head-dots_first').css({ "transform": "rotate(12deg)", "height": "35px", "width": "14px", "top": "1px", "border-radius": "50% 0 50% 50%" })
+        $('.cat__head-dots_second').css({ "transform": "rotate(-12deg)", "height": "35px", "width": "14px", "top": "1px", "border-radius": "0 50% 50% 50%" })
+    }
+
+    function style7() {
+        $('.cat__head-dots').css({ "transform": "rotate(180deg)", "height": "70px", "width": "14px", "top": "-50px", "border-radius": "0 0 50% 50%" })
+        $('.cat__head-dots_first').css({ "transform": "rotate(12deg)", "height": "35px", "width": "14px", "top": "1px", "border-radius": "50% 0 50% 50%" })
+        $('.cat__head-dots_second').css({ "transform": "rotate(-12deg)", "height": "35px", "width": "14px", "top": "1px", "border-radius": "0 50% 50% 50%" })
+    }
+
+function animationVariation(num) {
+    $('#dnaanimation').html(num);
+    switch (num) {
+        case 1:
+            $('#animationName').html('Moving Head')
+            animation1();
+            break;
+        case 2:
+            $('#animationName').html('Moving Ears')
+            animation2();
+            break;
+        case 3:
+            $('#animationName').html('Moving Tail')
+            animation3();
+            break;
+        case 4:
+            $('#animationName').html('Head Bop')
+            animation4();
+            break;
+        case 5:
+            $('#animationName').html('Zoom Face')
+            animation5();
+            break;
+        case 6:
+            $('#animationName').html('Wacky')
+            animation6();
+            break;
+        default:
+            break;
+    }
+}
+    function resetAnimation() {
+        $("#head").removeClass("movingHead");
+        $("#leftEar").removeClass("leftEarwithHead");
+        $("#rightEar").removeClass("movingHead");
+
+        $("#leftEar").removeClass("leftEarFast");
+        $("#rightEar").removeClass("rightEarFast");
+
+        $("#tail").removeClass("movingTail");
+
+        $("#head").removeClass("headBop");
+
+        $("#head").removeClass("faceZoom");
+
+        $("#left-eye").removeClass("leftEyeGoofy");
+        $("#right-eye").removeClass("rightEyeGoofy");
+        $("#head").removeClass("headTilt");
+        $("#leftEar").removeClass("leftEarTilt");
+        $("#rightEar").removeClass("headTilt");
+
+    }
+
+    function animation1() {
+        //Reset animation here
+        resetAnimation();
+        $("#head").addClass("movingHead");
+        $("#leftEar").addClass("leftEarwithHead");
+        $("#rightEar").addClass("movingHead");
+    }
+
+    function animation2() {
+        resetAnimation();
+        $("#leftEar").addClass("leftEarFast");
+        $("#rightEar").addClass("rightEarFast");
+    }
+
+    function animation3() {
+        resetAnimation();
+        $("#tail").addClass("movingTail");
+    }
+
+    function animation4() {
+        resetAnimation();
+        $("#head").addClass("headBop");
+    }
+
+    function animation5() {
+        resetAnimation();
+        $("#head").addClass("faceZoom");
+    }
+
+    function animation6() {
+        resetAnimation();
+        $("#left-eye").addClass("leftEyeGoofy");
+        $("#right-eye").addClass("rightEyeGoofy");
+        $("#head").addClass("headTilt");
+        $("#leftEar").addClass("leftEarTilt");
+        $("#rightEar").addClass("headTilt");
+    }
+
+
