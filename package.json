@@ -1,0 +1,25 @@
+{
+  "name": "cloning-cryptokitties",
+  "version": "1.0.0",
+  "description": "<p> A template used for learning purposes to play around with </p>",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CryptoPH-Xyz/Cloning-CryptoKitties.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CryptoPH-Xyz/Cloning-CryptoKitties/issues"
+  },
+  "homepage": "https://github.com/CryptoPH-Xyz/Cloning-CryptoKitties#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.1.0"
+  }
+}
