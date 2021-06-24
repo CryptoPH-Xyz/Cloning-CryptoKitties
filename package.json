@@ -21,5 +21,6 @@
   "homepage": "https://github.com/CryptoPH-Xyz/Cloning-CryptoKitties#readme",
   "dependencies": {
     "@openzeppelin/contracts": "^4.1.0"
-  }
+  },
+  "devDependencies": {}
 }
