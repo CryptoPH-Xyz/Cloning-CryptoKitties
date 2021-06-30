@@ -2,15 +2,15 @@
 var colors = Object.values(allColors())
 
 var defaultDNA = {
-  "headcolor" : 96,
+  "headcolor" : 21,
   "mouthColor" : 39,
-  "eyesColor" : 98,
-  "earsColor" : 98,
+  "eyesColor" : 65,
+  "earsColor" : 42,
   //Cattributes
   "eyesShape" : 6,
   "decorationPattern" : 3,
-  "decorationMidcolor" : 84,
-  "decorationSidescolor" : 69,
+  "decorationMidcolor" : 37,
+  "decorationSidescolor" : 37,
   "animation" :  6,
   "lastNum" :  1
 }
@@ -127,19 +127,19 @@ $('#animation').change( () => {
 
 //Random Kitty
 $('#random').click(() => {
-  var bodyColorRandom = Math.floor(Math.random() * 88) + 10;
+  var bodyColorRandom = Math.floor(Math.random() * (88 - 10) + 10);
   headColor(colors[bodyColorRandom],bodyColorRandom)
   $("#bodycolor").val(bodyColorRandom)
 
-  var mouthColorRandom = Math.floor(Math.random() * 88) + 10;
+  var mouthColorRandom = Math.floor(Math.random() * (88 - 10) + 10);
   mouthColor(colors[mouthColorRandom],mouthColorRandom)
   $("#mouthcolor").val(mouthColorRandom)
 
-  var eyesColorRandom = Math.floor(Math.random() * 88) + 10;
+  var eyesColorRandom = Math.floor(Math.random() * (88 - 10) + 10);
   eyeColor(colors[eyesColorRandom],eyesColorRandom)
   $("#eyescolor").val(eyesColorRandom)
 
-  var earsColorRandom = Math.floor(Math.random() * 88) + 10;
+  var earsColorRandom = Math.floor(Math.random() * (88 - 10) + 10);
   earColor(colors[earsColorRandom],earsColorRandom)
   $("#earscolor").val(earsColorRandom)
 
@@ -151,11 +151,11 @@ $('#random').click(() => {
   hairStyle(hairStyleRandom)
   $("#hairstyle").val(hairStyleRandom)
 
-  var hairMidColor = Math.floor(Math.random() * 88) + 10;
+  var hairMidColor = Math.floor(Math.random() * (88 - 10) + 10);
   middleHairColor(colors[hairMidColor],hairMidColor)
   $("#hairColor1").val(hairMidColor)
 
-  var hairSideColor = Math.floor(Math.random() * 88) + 10;
+  var hairSideColor = Math.floor(Math.random() * (88 - 10) + 10);
   sidesHairColor(colors[hairSideColor],hairSideColor)
   $("#hairColor2").val(hairSideColor)
 
