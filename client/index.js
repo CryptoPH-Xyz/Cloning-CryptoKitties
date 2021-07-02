@@ -14,11 +14,8 @@ $(document).ready(function(){
         instance.events.Birth().on('connected', function(subscriptionId) {
             console.log(subscriptionId);
         }) 
-        .on('error', function(error){
-            console.log(error);
-            alert("Kitty Birth failed");
-        })
         .on('data', function(event) {
+            console.log(event);
             alert(`Kitty birth successful! \n
             Kitty Owner: ${event.returnValues.owner}\n
             Kitty ID: ${event.returnValues.kittenId}\n
@@ -27,6 +24,7 @@ $(document).ready(function(){
             Kitty Genes: ${event.returnValues.genes}
             `)
         })
+        .on('error', console.error);
     })
 })
 
