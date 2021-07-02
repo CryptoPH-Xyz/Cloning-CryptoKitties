@@ -92,6 +92,30 @@ contract Kittycontract is IERC721, Ownable{
         _dadId = uint256(kitty.dadId);
         _generation = uint256(kitty.generation);       
     }
+
+    function breedKitty(uint256 _dadId, uint256 _mumId) public returns (uint256) {
+        //Check ownership
+        require(msg.sender != address(0), "ERC721: balance query for the zero address");
+        require(_ownedBy(msg.sender, _dadId), "ERC721: breeder is not owner");
+        require(_ownedBy(msg.sender, _mumId), "ERC721: breeder is not owner");
+
+        //DNA is here
+        uint256 kittyDna = _mixDna(kitties[_dadId].genes, kitties[_mumId].genes);
+
+        //Figure out the generation
+        uint16 dadGen = kitties[_dadId].generation;
+        uint16 mumGen = kitties[_mumId].generation;
+        uint16 kittyGen = 0;
+        
+        if((dadGen + mumGen) > 0) {
+            kittyGen = (dadGen + mumGen)/2 + 1;
+        } else {
+            kittyGen = 1;
+        }
+
+        //Create a new kitty with the new properties, give it to msg.sender
+        return _createKitty(_mumId, _dadId, kittyGen, kittyDna, msg.sender);
+    }
     
     function balanceOf(address _owner) external view override returns (uint256) {
         require(_owner != address(0), "ERC721: balance query for the zero address");
@@ -222,5 +246,13 @@ contract Kittycontract is IERC721, Ownable{
             size := extcodesize(_to)
         }
         return size > 0;
+    }
+
+    function _mixDna(uint256 _dadDna, uint256 _mumDna) internal pure returns (uint256) {
+        uint256 fromDad = _dadDna / 100000000;
+        uint256 fromMum = _mumDna % 100000000;
+
+        uint256 kittyDna = (fromDad * 100000000) + fromMum;
+        return kittyDna;
     }
 }
