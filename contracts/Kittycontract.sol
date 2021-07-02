@@ -15,6 +15,10 @@ contract Kittycontract is IERC721, Ownable{
 
     bytes4 internal constant MAGIC_ERC721_RECEIVED = bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"));
 
+    //interfaces supported
+    bytes4 private constant _INTERFACE_ID_ERC721 = 0x80ac58cd;
+    bytes4 private constant _INTERFACE_ID_ERC165 = 0x01ffc9a7;
+
     event Birth(address owner, uint256 kittenId, uint256 mumId, uint256 dadId, uint256 genes);
     
     
@@ -60,6 +64,18 @@ contract Kittycontract is IERC721, Ownable{
         return newKittenId;
     }
 
+    function getKittyByOwner(address _owner) external view returns(uint[] memory) {
+        uint[] memory result = new uint[](_kittyBalance[_owner]);
+        uint counter = 0;
+        for (uint i = 0; i < kitties.length; i++) {
+            if (_kittyOwners[i] == _owner) {
+                result[counter] = i;
+                counter++;
+            }
+        }
+        return result;
+    }
+
     function getKitty(uint256 _id) public view returns (
         uint256 _genes,
         uint256 _birthTime,
@@ -77,7 +93,7 @@ contract Kittycontract is IERC721, Ownable{
         _generation = uint256(kitty.generation);       
     }
     
-    function balanceOf(address _owner) public view override returns (uint256) {
+    function balanceOf(address _owner) external view override returns (uint256) {
         require(_owner != address(0), "ERC721: balance query for the zero address");
         return _kittyBalance[_owner];
     }
@@ -94,13 +110,13 @@ contract Kittycontract is IERC721, Ownable{
         return _symbol;
     }
 
-    function ownerOf(uint256 _tokenId) public view override returns (address) {
+    function ownerOf(uint256 _tokenId) external view override returns (address) {
         address owner = _kittyOwners[_tokenId];
         require(owner != address(0), "ERC721: owner query for nonexistent token");
         return owner;
     }
 
-    function transfer(address _to, uint256 _tokenId) public override {
+    function transfer(address _to, uint256 _tokenId) external override {
         require(address(this) != _to);
         require(address(0) != _to);
         require(_ownedBy(msg.sender, _tokenId));
@@ -108,15 +124,15 @@ contract Kittycontract is IERC721, Ownable{
         _transfer(msg.sender, _to, _tokenId);
     }
 
-    function approve(address _approved, uint256 _tokenId) external override {
+    function approve(address _to, uint256 _tokenId) external override {
         require(_ownedBy(msg.sender, _tokenId));
-        require(_approved != msg.sender, "Address to approve is same as owner address");
+        require(_to != msg.sender, "Address to approve is same as owner address");
 
-        _approve(_approved, _tokenId);
-        emit Approval(msg.sender, _approved, _tokenId);
+        _approve(_to, _tokenId);
+        emit Approval(msg.sender, _to, _tokenId);
     }
 
-    function setApprovalForAll(address _operator, bool _approved) external override{
+    function setApprovalForAll(address _operator, bool _approved) external override {
         require(_operator != msg.sender);
 
         _operatorApprovals[msg.sender][_operator] = _approved;
@@ -124,7 +140,8 @@ contract Kittycontract is IERC721, Ownable{
     }
 
     function getApproved(uint256 _tokenId) public view override returns (address){
-        require(_exists(_tokenId), "ERC721: operator query for nonexistent token");
+        require(_exists(_tokenId), "ERC721: operator query for nonexistent token"); //added
+        require(_tokenId < kitties.length);
         return _kittyApprovals[_tokenId];
     }
 
@@ -138,13 +155,17 @@ contract Kittycontract is IERC721, Ownable{
         _transfer(_from, _to, _tokenId);
     }
 
-    function safeTransferFrom(address _from, address _to, uint256 _tokenId, bytes calldata _data) public override {
+    function safeTransferFrom(address _from, address _to, uint256 _tokenId) public override {
+        safeTransferFrom(_from, _to, _tokenId);
+    }
+    
+    function safeTransferFrom(address _from, address _to, uint256 _tokenId, bytes calldata _data) public override{
         require(_isApprovedOrOwner(msg.sender, _from, _to, _tokenId), "ERC721: transfer caller is not owner nor approved");
         _safeTransfer(_from, _to, _tokenId, _data);
     }
 
-    function safeTransferFrom(address _from, address _to, uint256 _tokenId) public override {
-        safeTransferFrom(_from, _to, _tokenId);
+    function supportsInterface(bytes4 _interfaceId) external pure returns (bool) {
+        return (_interfaceId == _INTERFACE_ID_ERC721 || _interfaceId == _INTERFACE_ID_ERC165);
     }
 
 //re-usable functions
@@ -176,7 +197,6 @@ contract Kittycontract is IERC721, Ownable{
     }
 
     function _exists(uint256 _tokenId) internal view returns (bool) {
-        require(_tokenId < kitties.length);
         return _kittyOwners[_tokenId] != address(0);
     }
 

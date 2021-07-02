@@ -80,7 +80,7 @@
       "inputs": [
         {
           "internalType": "address",
-          "name": "owner",
+          "name": "_owner",
           "type": "address"
         }
       ],
@@ -138,7 +138,7 @@
       "inputs": [
         {
           "internalType": "uint256",
-          "name": "tokenId",
+          "name": "_tokenId",
           "type": "uint256"
         }
       ],
@@ -157,12 +157,12 @@
       "inputs": [
         {
           "internalType": "address",
-          "name": "to",
+          "name": "_to",
           "type": "address"
         },
         {
           "internalType": "uint256",
-          "name": "tokenId",
+          "name": "_tokenId",
           "type": "uint256"
         }
       ],
@@ -325,7 +325,7 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.6+commit.11564f7e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"approved\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"ApprovalForAll\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_approved\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"balance\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"getApproved\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_operator\",\"type\":\"address\"}],\"name\":\"isApprovedForAll\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"tokenName\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"ownerOf\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_operator\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"_approved\",\"type\":\"bool\"}],\"name\":\"setApprovalForAll\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"tokenSymbol\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"total\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Required interface of an ERC721 compliant contract.\",\"events\":{\"Approval(address,address,uint256)\":{\"details\":\"Emitted when `owner` enables `approved` to manage the `tokenId` token.\"},\"ApprovalForAll(address,address,bool)\":{\"details\":\"Emitted when `owner` enables or disables (`approved`) `operator` to manage all of its assets.\"},\"Transfer(address,address,uint256)\":{\"details\":\"Emitted when `tokenId` token is transfered from `from` to `to`.\"}},\"kind\":\"dev\",\"methods\":{\"approve(address,uint256)\":{\"details\":\"The zero address indicates there is no approved address.  Throws unless `msg.sender` is the current NFT owner, or an authorized  operator of the current owner.\",\"params\":{\"_approved\":\"The new approved NFT controller\",\"_tokenId\":\"The NFT to approve\"}},\"balanceOf(address)\":{\"details\":\"Returns the number of tokens in ``owner``'s account.\"},\"getApproved(uint256)\":{\"details\":\"Throws if `_tokenId` is not a valid NFT.\",\"params\":{\"_tokenId\":\"The NFT to find the approved address for\"},\"returns\":{\"_0\":\"The approved address for this NFT, or the zero address if there is none\"}},\"isApprovedForAll(address,address)\":{\"params\":{\"_operator\":\"The address that acts on behalf of the owner\",\"_owner\":\"The address that owns the NFTs\"},\"returns\":{\"_0\":\"True if `_operator` is an approved operator for `_owner`, false otherwise\"}},\"ownerOf(uint256)\":{\"details\":\"Returns the owner of the `tokenId` token. Requirements: - `tokenId` must exist.\"},\"safeTransferFrom(address,address,uint256)\":{\"details\":\"This works identically to the other function with an extra data parameter,  except this function just sets data to \\\"\\\".\",\"params\":{\"_from\":\"The current owner of the NFT\",\"_to\":\"The new owner\",\"_tokenId\":\"The NFT to transfer\"}},\"safeTransferFrom(address,address,uint256,bytes)\":{\"details\":\"Throws unless `msg.sender` is the current owner, an authorized  operator, or the approved address for this NFT. Throws if `_from` is  not the current owner. Throws if `_to` is the zero address. Throws if  `_tokenId` is not a valid NFT. When transfer is complete, this function  checks if `_to` is a smart contract (code size > 0). If so, it calls  `onERC721Received` on `_to` and throws if the return value is not  `bytes4(keccak256(\\\"onERC721Received(address,address,uint256,bytes)\\\"))`.\",\"params\":{\"_from\":\"The current owner of the NFT\",\"_to\":\"The new owner\",\"_tokenId\":\"The NFT to transfer\",\"data\":\"Additional data with no specified format, sent in call to `_to`\"}},\"setApprovalForAll(address,bool)\":{\"details\":\"Emits the ApprovalForAll event. The contract MUST allow  multiple operators per owner.\",\"params\":{\"_approved\":\"True if the operator is approved, false to revoke approval\",\"_operator\":\"Address to add to the set of authorized operators\"}},\"transferFrom(address,address,uint256)\":{\"details\":\"Throws unless `msg.sender` is the current owner, an authorized  operator, or the approved address for this NFT. Throws if `_from` is  not the current owner. Throws if `_to` is the zero address. Throws if  `_tokenId` is not a valid NFT.\",\"params\":{\"_from\":\"The current owner of the NFT\",\"_to\":\"The new owner\",\"_tokenId\":\"The NFT to transfer\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"approve(address,uint256)\":{\"notice\":\"Change or reaffirm the approved address for an NFT\"},\"getApproved(uint256)\":{\"notice\":\"Get the approved address for a single NFT\"},\"isApprovedForAll(address,address)\":{\"notice\":\"Query if an address is an authorized operator for another address\"},\"safeTransferFrom(address,address,uint256)\":{\"notice\":\"Transfers the ownership of an NFT from one address to another address\"},\"safeTransferFrom(address,address,uint256,bytes)\":{\"notice\":\"Transfers the ownership of an NFT from one address to another address\"},\"setApprovalForAll(address,bool)\":{\"notice\":\"Enable or disable approval for a third party (\\\"operator\\\") to manage  all of `msg.sender`'s assets\"},\"transferFrom(address,address,uint256)\":{\"notice\":\"Transfer ownership of an NFT -- THE CALLER IS RESPONSIBLE  TO CONFIRM THAT `_to` IS CAPABLE OF RECEIVING NFTS OR ELSE  THEY MAY BE PERMANENTLY LOST\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Users/Xyz Fiegalan/OneDrive/Desktop/My Projects/crypto-kitties-clone/Cloning-CryptoKitties/contracts/IERC721.sol\":\"IERC721\"},\"evmVersion\":\"berlin\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Xyz Fiegalan/OneDrive/Desktop/My Projects/crypto-kitties-clone/Cloning-CryptoKitties/contracts/IERC721.sol\":{\"keccak256\":\"0xd725b93fe5ddbc3a5ba42d4d05f87fcdd8e78a57fe40d42e7f4074199ea52f87\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d496d4ae10dea63fd4bcf497dfabeb16d9b66d773ccd9c79205d8b0bfb043757\",\"dweb:/ipfs/QmWMWzFwAwgb7HDBsDfScbEoGUMRpbYguSEgB89iePYk84\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.6+commit.11564f7e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"approved\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"ApprovalForAll\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_approved\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"balance\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"getApproved\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_operator\",\"type\":\"address\"}],\"name\":\"isApprovedForAll\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"tokenName\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"ownerOf\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_operator\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"_approved\",\"type\":\"bool\"}],\"name\":\"setApprovalForAll\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"tokenSymbol\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"total\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Required interface of an ERC721 compliant contract.\",\"events\":{\"Approval(address,address,uint256)\":{\"details\":\"Emitted when `owner` enables `approved` to manage the `tokenId` token.\"},\"ApprovalForAll(address,address,bool)\":{\"details\":\"Emitted when `owner` enables or disables (`approved`) `operator` to manage all of its assets.\"},\"Transfer(address,address,uint256)\":{\"details\":\"Emitted when `tokenId` token is transfered from `from` to `to`.\"}},\"kind\":\"dev\",\"methods\":{\"approve(address,uint256)\":{\"details\":\"The zero address indicates there is no approved address.  Throws unless `msg.sender` is the current NFT owner, or an authorized  operator of the current owner.\",\"params\":{\"_approved\":\"The new approved NFT controller\",\"_tokenId\":\"The NFT to approve\"}},\"balanceOf(address)\":{\"details\":\"Returns the number of tokens in ``owner``'s account.\"},\"getApproved(uint256)\":{\"details\":\"Throws if `_tokenId` is not a valid NFT.\",\"params\":{\"_tokenId\":\"The NFT to find the approved address for\"},\"returns\":{\"_0\":\"The approved address for this NFT, or the zero address if there is none\"}},\"isApprovedForAll(address,address)\":{\"params\":{\"_operator\":\"The address that acts on behalf of the owner\",\"_owner\":\"The address that owns the NFTs\"},\"returns\":{\"_0\":\"True if `_operator` is an approved operator for `_owner`, false otherwise\"}},\"ownerOf(uint256)\":{\"details\":\"Returns the owner of the `tokenId` token. Requirements: - `tokenId` must exist.\"},\"safeTransferFrom(address,address,uint256)\":{\"details\":\"This works identically to the other function with an extra data parameter,  except this function just sets data to \\\"\\\".\",\"params\":{\"_from\":\"The current owner of the NFT\",\"_to\":\"The new owner\",\"_tokenId\":\"The NFT to transfer\"}},\"safeTransferFrom(address,address,uint256,bytes)\":{\"details\":\"Throws unless `msg.sender` is the current owner, an authorized  operator, or the approved address for this NFT. Throws if `_from` is  not the current owner. Throws if `_to` is the zero address. Throws if  `_tokenId` is not a valid NFT. When transfer is complete, this function  checks if `_to` is a smart contract (code size > 0). If so, it calls  `onERC721Received` on `_to` and throws if the return value is not  `bytes4(keccak256(\\\"onERC721Received(address,address,uint256,bytes)\\\"))`.\",\"params\":{\"_from\":\"The current owner of the NFT\",\"_to\":\"The new owner\",\"_tokenId\":\"The NFT to transfer\",\"data\":\"Additional data with no specified format, sent in call to `_to`\"}},\"setApprovalForAll(address,bool)\":{\"details\":\"Emits the ApprovalForAll event. The contract MUST allow  multiple operators per owner.\",\"params\":{\"_approved\":\"True if the operator is approved, false to revoke approval\",\"_operator\":\"Address to add to the set of authorized operators\"}},\"transferFrom(address,address,uint256)\":{\"details\":\"Throws unless `msg.sender` is the current owner, an authorized  operator, or the approved address for this NFT. Throws if `_from` is  not the current owner. Throws if `_to` is the zero address. Throws if  `_tokenId` is not a valid NFT.\",\"params\":{\"_from\":\"The current owner of the NFT\",\"_to\":\"The new owner\",\"_tokenId\":\"The NFT to transfer\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"approve(address,uint256)\":{\"notice\":\"Change or reaffirm the approved address for an NFT\"},\"getApproved(uint256)\":{\"notice\":\"Get the approved address for a single NFT\"},\"isApprovedForAll(address,address)\":{\"notice\":\"Query if an address is an authorized operator for another address\"},\"safeTransferFrom(address,address,uint256)\":{\"notice\":\"Transfers the ownership of an NFT from one address to another address\"},\"safeTransferFrom(address,address,uint256,bytes)\":{\"notice\":\"Transfers the ownership of an NFT from one address to another address\"},\"setApprovalForAll(address,bool)\":{\"notice\":\"Enable or disable approval for a third party (\\\"operator\\\") to manage  all of `msg.sender`'s assets\"},\"transferFrom(address,address,uint256)\":{\"notice\":\"Transfer ownership of an NFT -- THE CALLER IS RESPONSIBLE  TO CONFIRM THAT `_to` IS CAPABLE OF RECEIVING NFTS OR ELSE  THEY MAY BE PERMANENTLY LOST\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Users/Xyz Fiegalan/OneDrive/Desktop/My Projects/crypto-kitties-clone/Cloning-CryptoKitties/contracts/IERC721.sol\":\"IERC721\"},\"evmVersion\":\"berlin\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Xyz Fiegalan/OneDrive/Desktop/My Projects/crypto-kitties-clone/Cloning-CryptoKitties/contracts/IERC721.sol\":{\"keccak256\":\"0x126edb1c89dac047f3d5d99525304198c0f10746a7676d2ef40c41e8afe35a65\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://826fec4308def175129649a5ec87a45a89d178bf101651d82d0178bb1614e36f\",\"dweb:/ipfs/QmQwf4va59tcrd2di2eiw7eZKhXkSwd2YvsatnKALM4Hn9\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
@@ -333,7 +333,7 @@
   "deployedGeneratedSources": [],
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n/**\r\n * @dev Required interface of an ERC721 compliant contract.\r\n */\r\ninterface IERC721 {\r\n    /**\r\n     * @dev Emitted when `tokenId` token is transfered from `from` to `to`.\r\n     */\r\n    event Transfer(address indexed from, address indexed to, uint256 indexed tokenId);\r\n\r\n    /**\r\n     * @dev Emitted when `owner` enables `approved` to manage the `tokenId` token.\r\n     */\r\n    event Approval(address indexed owner, address indexed approved, uint256 indexed tokenId);\r\n\r\n    /**\r\n     * @dev Emitted when `owner` enables or disables (`approved`) `operator` to manage all of its assets.\r\n     */\r\n    event ApprovalForAll(address indexed owner, address indexed operator, bool approved);\r\n\r\n    /**\r\n     * @dev Returns the number of tokens in ``owner``'s account.\r\n     */\r\n    function balanceOf(address owner) external view returns (uint256 balance);\r\n\r\n    /*\r\n     * @dev Returns the total number of tokens in circulation.\r\n     */\r\n    function totalSupply() external view returns (uint256 total);\r\n\r\n    /*\r\n     * @dev Returns the name of the token.\r\n     */\r\n    function name() external view returns (string memory tokenName);\r\n\r\n    /*\r\n     * @dev Returns the symbol of the token.\r\n     */\r\n    function symbol() external view returns (string memory tokenSymbol);\r\n\r\n    /**\r\n     * @dev Returns the owner of the `tokenId` token.\r\n     *\r\n     * Requirements:\r\n     *\r\n     * - `tokenId` must exist.\r\n     */\r\n    function ownerOf(uint256 tokenId) external view returns (address owner);\r\n\r\n\r\n     /* @dev Transfers `tokenId` token from `msg.sender` to `to`.\r\n     *\r\n     *\r\n     * Requirements:\r\n     *\r\n     * - `to` cannot be the zero address.\r\n     * - `to` can not be the contract address.\r\n     * - `tokenId` token must be owned by `msg.sender`.\r\n     *\r\n     * Emits a {Transfer} event.\r\n     */\r\n    function transfer(address to, uint256 tokenId) external;\r\n\r\n    /// @notice Change or reaffirm the approved address for an NFT\r\n    /// @dev The zero address indicates there is no approved address.\r\n    ///  Throws unless `msg.sender` is the current NFT owner, or an authorized\r\n    ///  operator of the current owner.\r\n    /// @param _approved The new approved NFT controller\r\n    /// @param _tokenId The NFT to approve\r\n    function approve(address _approved, uint256 _tokenId) external;\r\n\r\n    /// @notice Enable or disable approval for a third party (\"operator\") to manage\r\n    ///  all of `msg.sender`'s assets\r\n    /// @dev Emits the ApprovalForAll event. The contract MUST allow\r\n    ///  multiple operators per owner.\r\n    /// @param _operator Address to add to the set of authorized operators\r\n    /// @param _approved True if the operator is approved, false to revoke approval\r\n    function setApprovalForAll(address _operator, bool _approved) external;\r\n\r\n    /// @notice Get the approved address for a single NFT\r\n    /// @dev Throws if `_tokenId` is not a valid NFT.\r\n    /// @param _tokenId The NFT to find the approved address for\r\n    /// @return The approved address for this NFT, or the zero address if there is none\r\n    function getApproved(uint256 _tokenId) external view returns (address);\r\n\r\n    /// @notice Query if an address is an authorized operator for another address\r\n    /// @param _owner The address that owns the NFTs\r\n    /// @param _operator The address that acts on behalf of the owner\r\n    /// @return True if `_operator` is an approved operator for `_owner`, false otherwise\r\n    function isApprovedForAll(address _owner, address _operator) external view returns (bool);\r\n\r\n    /// @notice Transfers the ownership of an NFT from one address to another address\r\n    /// @dev Throws unless `msg.sender` is the current owner, an authorized\r\n    ///  operator, or the approved address for this NFT. Throws if `_from` is\r\n    ///  not the current owner. Throws if `_to` is the zero address. Throws if\r\n    ///  `_tokenId` is not a valid NFT. When transfer is complete, this function\r\n    ///  checks if `_to` is a smart contract (code size > 0). If so, it calls\r\n    ///  `onERC721Received` on `_to` and throws if the return value is not\r\n    ///  `bytes4(keccak256(\"onERC721Received(address,address,uint256,bytes)\"))`.\r\n    /// @param _from The current owner of the NFT\r\n    /// @param _to The new owner\r\n    /// @param _tokenId The NFT to transfer\r\n    /// @param data Additional data with no specified format, sent in call to `_to`\r\n    function safeTransferFrom(address _from, address _to, uint256 _tokenId, bytes calldata data) external;\r\n\r\n    /// @notice Transfers the ownership of an NFT from one address to another address\r\n    /// @dev This works identically to the other function with an extra data parameter,\r\n    ///  except this function just sets data to \"\".\r\n    /// @param _from The current owner of the NFT\r\n    /// @param _to The new owner\r\n    /// @param _tokenId The NFT to transfer\r\n    function safeTransferFrom(address _from, address _to, uint256 _tokenId) external;\r\n\r\n    /// @notice Transfer ownership of an NFT -- THE CALLER IS RESPONSIBLE\r\n    ///  TO CONFIRM THAT `_to` IS CAPABLE OF RECEIVING NFTS OR ELSE\r\n    ///  THEY MAY BE PERMANENTLY LOST\r\n    /// @dev Throws unless `msg.sender` is the current owner, an authorized\r\n    ///  operator, or the approved address for this NFT. Throws if `_from` is\r\n    ///  not the current owner. Throws if `_to` is the zero address. Throws if\r\n    ///  `_tokenId` is not a valid NFT.\r\n    /// @param _from The current owner of the NFT\r\n    /// @param _to The new owner\r\n    /// @param _tokenId The NFT to transfer\r\n    function transferFrom(address _from, address _to, uint256 _tokenId) external;\r\n}\r\n\r\n\r\n",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n/**\r\n * @dev Required interface of an ERC721 compliant contract.\r\n */\r\ninterface IERC721 {\r\n    /**\r\n     * @dev Emitted when `tokenId` token is transfered from `from` to `to`.\r\n     */\r\n    event Transfer(address indexed from, address indexed to, uint256 indexed tokenId);\r\n\r\n    /**\r\n     * @dev Emitted when `owner` enables `approved` to manage the `tokenId` token.\r\n     */\r\n    event Approval(address indexed owner, address indexed approved, uint256 indexed tokenId);\r\n\r\n    /**\r\n     * @dev Emitted when `owner` enables or disables (`approved`) `operator` to manage all of its assets.\r\n     */\r\n    event ApprovalForAll(address indexed owner, address indexed operator, bool approved);\r\n\r\n    /**\r\n     * @dev Returns the number of tokens in ``owner``'s account.\r\n     */\r\n    function balanceOf(address _owner) external view returns (uint256 balance);\r\n\r\n    /*\r\n     * @dev Returns the total number of tokens in circulation.\r\n     */\r\n    function totalSupply() external view returns (uint256 total);\r\n\r\n    /*\r\n     * @dev Returns the name of the token.\r\n     */\r\n    function name() external view returns (string memory tokenName);\r\n\r\n    /*\r\n     * @dev Returns the symbol of the token.\r\n     */\r\n    function symbol() external view returns (string memory tokenSymbol);\r\n\r\n    /**\r\n     * @dev Returns the owner of the `tokenId` token.\r\n     *\r\n     * Requirements:\r\n     *\r\n     * - `tokenId` must exist.\r\n     */\r\n    function ownerOf(uint256 _tokenId) external view returns (address owner);\r\n\r\n\r\n     /* @dev Transfers `tokenId` token from `msg.sender` to `to`.\r\n     *\r\n     *\r\n     * Requirements:\r\n     *\r\n     * - `to` cannot be the zero address.\r\n     * - `to` can not be the contract address.\r\n     * - `tokenId` token must be owned by `msg.sender`.\r\n     *\r\n     * Emits a {Transfer} event.\r\n     */\r\n    function transfer(address _to, uint256 _tokenId) external;\r\n\r\n    /// @notice Change or reaffirm the approved address for an NFT\r\n    /// @dev The zero address indicates there is no approved address.\r\n    ///  Throws unless `msg.sender` is the current NFT owner, or an authorized\r\n    ///  operator of the current owner.\r\n    /// @param _approved The new approved NFT controller\r\n    /// @param _tokenId The NFT to approve\r\n    function approve(address _approved, uint256 _tokenId) external;\r\n\r\n    /// @notice Enable or disable approval for a third party (\"operator\") to manage\r\n    ///  all of `msg.sender`'s assets\r\n    /// @dev Emits the ApprovalForAll event. The contract MUST allow\r\n    ///  multiple operators per owner.\r\n    /// @param _operator Address to add to the set of authorized operators\r\n    /// @param _approved True if the operator is approved, false to revoke approval\r\n    function setApprovalForAll(address _operator, bool _approved) external;\r\n\r\n    /// @notice Get the approved address for a single NFT\r\n    /// @dev Throws if `_tokenId` is not a valid NFT.\r\n    /// @param _tokenId The NFT to find the approved address for\r\n    /// @return The approved address for this NFT, or the zero address if there is none\r\n    function getApproved(uint256 _tokenId) external view returns (address);\r\n\r\n    /// @notice Query if an address is an authorized operator for another address\r\n    /// @param _owner The address that owns the NFTs\r\n    /// @param _operator The address that acts on behalf of the owner\r\n    /// @return True if `_operator` is an approved operator for `_owner`, false otherwise\r\n    function isApprovedForAll(address _owner, address _operator) external view returns (bool);\r\n\r\n    /// @notice Transfers the ownership of an NFT from one address to another address\r\n    /// @dev Throws unless `msg.sender` is the current owner, an authorized\r\n    ///  operator, or the approved address for this NFT. Throws if `_from` is\r\n    ///  not the current owner. Throws if `_to` is the zero address. Throws if\r\n    ///  `_tokenId` is not a valid NFT. When transfer is complete, this function\r\n    ///  checks if `_to` is a smart contract (code size > 0). If so, it calls\r\n    ///  `onERC721Received` on `_to` and throws if the return value is not\r\n    ///  `bytes4(keccak256(\"onERC721Received(address,address,uint256,bytes)\"))`.\r\n    /// @param _from The current owner of the NFT\r\n    /// @param _to The new owner\r\n    /// @param _tokenId The NFT to transfer\r\n    /// @param data Additional data with no specified format, sent in call to `_to`\r\n    function safeTransferFrom(address _from, address _to, uint256 _tokenId, bytes calldata data) external;\r\n\r\n    /// @notice Transfers the ownership of an NFT from one address to another address\r\n    /// @dev This works identically to the other function with an extra data parameter,\r\n    ///  except this function just sets data to \"\".\r\n    /// @param _from The current owner of the NFT\r\n    /// @param _to The new owner\r\n    /// @param _tokenId The NFT to transfer\r\n    function safeTransferFrom(address _from, address _to, uint256 _tokenId) external;\r\n\r\n    /// @notice Transfer ownership of an NFT -- THE CALLER IS RESPONSIBLE\r\n    ///  TO CONFIRM THAT `_to` IS CAPABLE OF RECEIVING NFTS OR ELSE\r\n    ///  THEY MAY BE PERMANENTLY LOST\r\n    /// @dev Throws unless `msg.sender` is the current owner, an authorized\r\n    ///  operator, or the approved address for this NFT. Throws if `_from` is\r\n    ///  not the current owner. Throws if `_to` is the zero address. Throws if\r\n    ///  `_tokenId` is not a valid NFT.\r\n    /// @param _from The current owner of the NFT\r\n    /// @param _to The new owner\r\n    /// @param _tokenId The NFT to transfer\r\n    function transferFrom(address _from, address _to, uint256 _tokenId) external;\r\n}\r\n\r\n\r\n",
   "sourcePath": "C:\\Users\\Xyz Fiegalan\\OneDrive\\Desktop\\My Projects\\crypto-kitties-clone\\Cloning-CryptoKitties\\contracts\\IERC721.sol",
   "ast": {
     "absolutePath": "/C/Users/Xyz Fiegalan/OneDrive/Desktop/My Projects/crypto-kitties-clone/Cloning-CryptoKitties/contracts/IERC721.sol",
@@ -721,11 +721,11 @@
                   "constant": false,
                   "id": 32,
                   "mutability": "mutable",
-                  "name": "owner",
-                  "nameLocation": "867:5:0",
+                  "name": "_owner",
+                  "nameLocation": "867:6:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 37,
-                  "src": "859:13:0",
+                  "src": "859:14:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -746,7 +746,7 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "858:15:0"
+              "src": "858:16:0"
             },
             "returnParameters": {
               "id": 36,
@@ -757,10 +757,10 @@
                   "id": 35,
                   "mutability": "mutable",
                   "name": "balance",
-                  "nameLocation": "905:7:0",
+                  "nameLocation": "906:7:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 37,
-                  "src": "897:15:0",
+                  "src": "898:15:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -771,7 +771,7 @@
                     "id": 34,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "897:7:0",
+                    "src": "898:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -780,10 +780,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "896:17:0"
+              "src": "897:17:0"
             },
             "scope": 134,
-            "src": "840:74:0",
+            "src": "840:75:0",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -795,13 +795,13 @@
             "kind": "function",
             "modifiers": [],
             "name": "totalSupply",
-            "nameLocation": "1012:11:0",
+            "nameLocation": "1013:11:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 38,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1023:2:0"
+              "src": "1024:2:0"
             },
             "returnParameters": {
               "id": 41,
@@ -812,10 +812,10 @@
                   "id": 40,
                   "mutability": "mutable",
                   "name": "total",
-                  "nameLocation": "1057:5:0",
+                  "nameLocation": "1058:5:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 42,
-                  "src": "1049:13:0",
+                  "src": "1050:13:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -826,7 +826,7 @@
                     "id": 39,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1049:7:0",
+                    "src": "1050:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -835,10 +835,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1048:15:0"
+              "src": "1049:15:0"
             },
             "scope": 134,
-            "src": "1003:61:0",
+            "src": "1004:61:0",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -850,13 +850,13 @@
             "kind": "function",
             "modifiers": [],
             "name": "name",
-            "nameLocation": "1142:4:0",
+            "nameLocation": "1143:4:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 43,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1146:2:0"
+              "src": "1147:2:0"
             },
             "returnParameters": {
               "id": 46,
@@ -867,10 +867,10 @@
                   "id": 45,
                   "mutability": "mutable",
                   "name": "tokenName",
-                  "nameLocation": "1186:9:0",
+                  "nameLocation": "1187:9:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 47,
-                  "src": "1172:23:0",
+                  "src": "1173:23:0",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -881,7 +881,7 @@
                     "id": 44,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1172:6:0",
+                    "src": "1173:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -890,10 +890,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1171:25:0"
+              "src": "1172:25:0"
             },
             "scope": 134,
-            "src": "1133:64:0",
+            "src": "1134:64:0",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -905,13 +905,13 @@
             "kind": "function",
             "modifiers": [],
             "name": "symbol",
-            "nameLocation": "1277:6:0",
+            "nameLocation": "1278:6:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 48,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1283:2:0"
+              "src": "1284:2:0"
             },
             "returnParameters": {
               "id": 51,
@@ -922,10 +922,10 @@
                   "id": 50,
                   "mutability": "mutable",
                   "name": "tokenSymbol",
-                  "nameLocation": "1323:11:0",
+                  "nameLocation": "1324:11:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 52,
-                  "src": "1309:25:0",
+                  "src": "1310:25:0",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -936,7 +936,7 @@
                     "id": 49,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1309:6:0",
+                    "src": "1310:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -945,10 +945,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1308:27:0"
+              "src": "1309:27:0"
             },
             "scope": 134,
-            "src": "1268:68:0",
+            "src": "1269:68:0",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -957,7 +957,7 @@
             "documentation": {
               "id": 53,
               "nodeType": "StructuredDocumentation",
-              "src": "1344:137:0",
+              "src": "1345:137:0",
               "text": " @dev Returns the owner of the `tokenId` token.\n Requirements:\n - `tokenId` must exist."
             },
             "functionSelector": "6352211e",
@@ -966,7 +966,7 @@
             "kind": "function",
             "modifiers": [],
             "name": "ownerOf",
-            "nameLocation": "1496:7:0",
+            "nameLocation": "1497:7:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 56,
@@ -976,11 +976,11 @@
                   "constant": false,
                   "id": 55,
                   "mutability": "mutable",
-                  "name": "tokenId",
-                  "nameLocation": "1512:7:0",
+                  "name": "_tokenId",
+                  "nameLocation": "1513:8:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 60,
-                  "src": "1504:15:0",
+                  "src": "1505:16:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -991,7 +991,7 @@
                     "id": 54,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1504:7:0",
+                    "src": "1505:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1000,7 +1000,7 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1503:17:0"
+              "src": "1504:18:0"
             },
             "returnParameters": {
               "id": 59,
@@ -1011,10 +1011,10 @@
                   "id": 58,
                   "mutability": "mutable",
                   "name": "owner",
-                  "nameLocation": "1552:5:0",
+                  "nameLocation": "1554:5:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 60,
-                  "src": "1544:13:0",
+                  "src": "1546:13:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1025,7 +1025,7 @@
                     "id": 57,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1544:7:0",
+                    "src": "1546:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1035,10 +1035,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1543:15:0"
+              "src": "1545:15:0"
             },
             "scope": 134,
-            "src": "1487:72:0",
+            "src": "1488:73:0",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -1050,7 +1050,7 @@
             "kind": "function",
             "modifiers": [],
             "name": "transfer",
-            "nameLocation": "1890:8:0",
+            "nameLocation": "1892:8:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 65,
@@ -1060,11 +1060,11 @@
                   "constant": false,
                   "id": 62,
                   "mutability": "mutable",
-                  "name": "to",
-                  "nameLocation": "1907:2:0",
+                  "name": "_to",
+                  "nameLocation": "1909:3:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 67,
-                  "src": "1899:10:0",
+                  "src": "1901:11:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1075,7 +1075,7 @@
                     "id": 61,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1899:7:0",
+                    "src": "1901:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1088,11 +1088,11 @@
                   "constant": false,
                   "id": 64,
                   "mutability": "mutable",
-                  "name": "tokenId",
-                  "nameLocation": "1919:7:0",
+                  "name": "_tokenId",
+                  "nameLocation": "1922:8:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 67,
-                  "src": "1911:15:0",
+                  "src": "1914:16:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1103,7 +1103,7 @@
                     "id": 63,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1911:7:0",
+                    "src": "1914:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1112,16 +1112,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1898:29:0"
+              "src": "1900:31:0"
             },
             "returnParameters": {
               "id": 66,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1936:0:0"
+              "src": "1940:0:0"
             },
             "scope": 134,
-            "src": "1881:56:0",
+            "src": "1883:58:0",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -1130,7 +1130,7 @@
             "documentation": {
               "id": 68,
               "nodeType": "StructuredDocumentation",
-              "src": "1945:356:0",
+              "src": "1949:356:0",
               "text": "@notice Change or reaffirm the approved address for an NFT\n @dev The zero address indicates there is no approved address.\n  Throws unless `msg.sender` is the current NFT owner, or an authorized\n  operator of the current owner.\n @param _approved The new approved NFT controller\n @param _tokenId The NFT to approve"
             },
             "functionSelector": "095ea7b3",
@@ -1139,7 +1139,7 @@
             "kind": "function",
             "modifiers": [],
             "name": "approve",
-            "nameLocation": "2316:7:0",
+            "nameLocation": "2320:7:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 73,
@@ -1150,10 +1150,10 @@
                   "id": 70,
                   "mutability": "mutable",
                   "name": "_approved",
-                  "nameLocation": "2332:9:0",
+                  "nameLocation": "2336:9:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 75,
-                  "src": "2324:17:0",
+                  "src": "2328:17:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1164,7 +1164,7 @@
                     "id": 69,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2324:7:0",
+                    "src": "2328:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1178,10 +1178,10 @@
                   "id": 72,
                   "mutability": "mutable",
                   "name": "_tokenId",
-                  "nameLocation": "2351:8:0",
+                  "nameLocation": "2355:8:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 75,
-                  "src": "2343:16:0",
+                  "src": "2347:16:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1192,7 +1192,7 @@
                     "id": 71,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2343:7:0",
+                    "src": "2347:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1201,16 +1201,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2323:37:0"
+              "src": "2327:37:0"
             },
             "returnParameters": {
               "id": 74,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2369:0:0"
+              "src": "2373:0:0"
             },
             "scope": 134,
-            "src": "2307:63:0",
+            "src": "2311:63:0",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -1219,7 +1219,7 @@
             "documentation": {
               "id": 76,
               "nodeType": "StructuredDocumentation",
-              "src": "2378:389:0",
+              "src": "2382:389:0",
               "text": "@notice Enable or disable approval for a third party (\"operator\") to manage\n  all of `msg.sender`'s assets\n @dev Emits the ApprovalForAll event. The contract MUST allow\n  multiple operators per owner.\n @param _operator Address to add to the set of authorized operators\n @param _approved True if the operator is approved, false to revoke approval"
             },
             "functionSelector": "a22cb465",
@@ -1228,7 +1228,7 @@
             "kind": "function",
             "modifiers": [],
             "name": "setApprovalForAll",
-            "nameLocation": "2782:17:0",
+            "nameLocation": "2786:17:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 81,
@@ -1239,10 +1239,10 @@
                   "id": 78,
                   "mutability": "mutable",
                   "name": "_operator",
-                  "nameLocation": "2808:9:0",
+                  "nameLocation": "2812:9:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 83,
-                  "src": "2800:17:0",
+                  "src": "2804:17:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1253,7 +1253,7 @@
                     "id": 77,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2800:7:0",
+                    "src": "2804:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1267,10 +1267,10 @@
                   "id": 80,
                   "mutability": "mutable",
                   "name": "_approved",
-                  "nameLocation": "2824:9:0",
+                  "nameLocation": "2828:9:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 83,
-                  "src": "2819:14:0",
+                  "src": "2823:14:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1281,7 +1281,7 @@
                     "id": 79,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2819:4:0",
+                    "src": "2823:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1290,16 +1290,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2799:35:0"
+              "src": "2803:35:0"
             },
             "returnParameters": {
               "id": 82,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2843:0:0"
+              "src": "2847:0:0"
             },
             "scope": 134,
-            "src": "2773:71:0",
+            "src": "2777:71:0",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -1308,7 +1308,7 @@
             "documentation": {
               "id": 84,
               "nodeType": "StructuredDocumentation",
-              "src": "2852:263:0",
+              "src": "2856:263:0",
               "text": "@notice Get the approved address for a single NFT\n @dev Throws if `_tokenId` is not a valid NFT.\n @param _tokenId The NFT to find the approved address for\n @return The approved address for this NFT, or the zero address if there is none"
             },
             "functionSelector": "081812fc",
@@ -1317,7 +1317,7 @@
             "kind": "function",
             "modifiers": [],
             "name": "getApproved",
-            "nameLocation": "3130:11:0",
+            "nameLocation": "3134:11:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 87,
@@ -1328,10 +1328,10 @@
                   "id": 86,
                   "mutability": "mutable",
                   "name": "_tokenId",
-                  "nameLocation": "3150:8:0",
+                  "nameLocation": "3154:8:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 91,
-                  "src": "3142:16:0",
+                  "src": "3146:16:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1342,7 +1342,7 @@
                     "id": 85,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3142:7:0",
+                    "src": "3146:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1351,7 +1351,7 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3141:18:0"
+              "src": "3145:18:0"
             },
             "returnParameters": {
               "id": 90,
@@ -1365,7 +1365,7 @@
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
                   "scope": 91,
-                  "src": "3183:7:0",
+                  "src": "3187:7:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1376,7 +1376,7 @@
                     "id": 88,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3183:7:0",
+                    "src": "3187:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1386,10 +1386,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3182:9:0"
+              "src": "3186:9:0"
             },
             "scope": 134,
-            "src": "3121:71:0",
+            "src": "3125:71:0",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -1398,7 +1398,7 @@
             "documentation": {
               "id": 92,
               "nodeType": "StructuredDocumentation",
-              "src": "3200:293:0",
+              "src": "3204:293:0",
               "text": "@notice Query if an address is an authorized operator for another address\n @param _owner The address that owns the NFTs\n @param _operator The address that acts on behalf of the owner\n @return True if `_operator` is an approved operator for `_owner`, false otherwise"
             },
             "functionSelector": "e985e9c5",
@@ -1407,7 +1407,7 @@
             "kind": "function",
             "modifiers": [],
             "name": "isApprovedForAll",
-            "nameLocation": "3508:16:0",
+            "nameLocation": "3512:16:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 97,
@@ -1418,10 +1418,10 @@
                   "id": 94,
                   "mutability": "mutable",
                   "name": "_owner",
-                  "nameLocation": "3533:6:0",
+                  "nameLocation": "3537:6:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 101,
-                  "src": "3525:14:0",
+                  "src": "3529:14:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1432,7 +1432,7 @@
                     "id": 93,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3525:7:0",
+                    "src": "3529:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1446,10 +1446,10 @@
                   "id": 96,
                   "mutability": "mutable",
                   "name": "_operator",
-                  "nameLocation": "3549:9:0",
+                  "nameLocation": "3553:9:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 101,
-                  "src": "3541:17:0",
+                  "src": "3545:17:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1460,7 +1460,7 @@
                     "id": 95,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3541:7:0",
+                    "src": "3545:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1470,7 +1470,7 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3524:35:0"
+              "src": "3528:35:0"
             },
             "returnParameters": {
               "id": 100,
@@ -1484,7 +1484,7 @@
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
                   "scope": 101,
-                  "src": "3583:4:0",
+                  "src": "3587:4:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1495,7 +1495,7 @@
                     "id": 98,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3583:4:0",
+                    "src": "3587:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1504,10 +1504,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3582:6:0"
+              "src": "3586:6:0"
             },
             "scope": 134,
-            "src": "3499:90:0",
+            "src": "3503:90:0",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -1516,7 +1516,7 @@
             "documentation": {
               "id": 102,
               "nodeType": "StructuredDocumentation",
-              "src": "3597:851:0",
+              "src": "3601:851:0",
               "text": "@notice Transfers the ownership of an NFT from one address to another address\n @dev Throws unless `msg.sender` is the current owner, an authorized\n  operator, or the approved address for this NFT. Throws if `_from` is\n  not the current owner. Throws if `_to` is the zero address. Throws if\n  `_tokenId` is not a valid NFT. When transfer is complete, this function\n  checks if `_to` is a smart contract (code size > 0). If so, it calls\n  `onERC721Received` on `_to` and throws if the return value is not\n  `bytes4(keccak256(\"onERC721Received(address,address,uint256,bytes)\"))`.\n @param _from The current owner of the NFT\n @param _to The new owner\n @param _tokenId The NFT to transfer\n @param data Additional data with no specified format, sent in call to `_to`"
             },
             "functionSelector": "b88d4fde",
@@ -1525,7 +1525,7 @@
             "kind": "function",
             "modifiers": [],
             "name": "safeTransferFrom",
-            "nameLocation": "4463:16:0",
+            "nameLocation": "4467:16:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 111,
@@ -1536,10 +1536,10 @@
                   "id": 104,
                   "mutability": "mutable",
                   "name": "_from",
-                  "nameLocation": "4488:5:0",
+                  "nameLocation": "4492:5:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 113,
-                  "src": "4480:13:0",
+                  "src": "4484:13:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1550,7 +1550,7 @@
                     "id": 103,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4480:7:0",
+                    "src": "4484:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1564,10 +1564,10 @@
                   "id": 106,
                   "mutability": "mutable",
                   "name": "_to",
-                  "nameLocation": "4503:3:0",
+                  "nameLocation": "4507:3:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 113,
-                  "src": "4495:11:0",
+                  "src": "4499:11:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1578,7 +1578,7 @@
                     "id": 105,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4495:7:0",
+                    "src": "4499:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1592,10 +1592,10 @@
                   "id": 108,
                   "mutability": "mutable",
                   "name": "_tokenId",
-                  "nameLocation": "4516:8:0",
+                  "nameLocation": "4520:8:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 113,
-                  "src": "4508:16:0",
+                  "src": "4512:16:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1606,7 +1606,7 @@
                     "id": 107,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4508:7:0",
+                    "src": "4512:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1619,10 +1619,10 @@
                   "id": 110,
                   "mutability": "mutable",
                   "name": "data",
-                  "nameLocation": "4541:4:0",
+                  "nameLocation": "4545:4:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 113,
-                  "src": "4526:19:0",
+                  "src": "4530:19:0",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
@@ -1633,7 +1633,7 @@
                     "id": 109,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4526:5:0",
+                    "src": "4530:5:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
                       "typeString": "bytes"
@@ -1642,16 +1642,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4479:67:0"
+              "src": "4483:67:0"
             },
             "returnParameters": {
               "id": 112,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "4555:0:0"
+              "src": "4559:0:0"
             },
             "scope": 134,
-            "src": "4454:102:0",
+            "src": "4458:102:0",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -1660,7 +1660,7 @@
             "documentation": {
               "id": 114,
               "nodeType": "StructuredDocumentation",
-              "src": "4564:353:0",
+              "src": "4568:353:0",
               "text": "@notice Transfers the ownership of an NFT from one address to another address\n @dev This works identically to the other function with an extra data parameter,\n  except this function just sets data to \"\".\n @param _from The current owner of the NFT\n @param _to The new owner\n @param _tokenId The NFT to transfer"
             },
             "functionSelector": "42842e0e",
@@ -1669,7 +1669,7 @@
             "kind": "function",
             "modifiers": [],
             "name": "safeTransferFrom",
-            "nameLocation": "4932:16:0",
+            "nameLocation": "4936:16:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 121,
@@ -1680,10 +1680,10 @@
                   "id": 116,
                   "mutability": "mutable",
                   "name": "_from",
-                  "nameLocation": "4957:5:0",
+                  "nameLocation": "4961:5:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 123,
-                  "src": "4949:13:0",
+                  "src": "4953:13:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1694,7 +1694,7 @@
                     "id": 115,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4949:7:0",
+                    "src": "4953:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1708,10 +1708,10 @@
                   "id": 118,
                   "mutability": "mutable",
                   "name": "_to",
-                  "nameLocation": "4972:3:0",
+                  "nameLocation": "4976:3:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 123,
-                  "src": "4964:11:0",
+                  "src": "4968:11:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1722,7 +1722,7 @@
                     "id": 117,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4964:7:0",
+                    "src": "4968:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1736,10 +1736,10 @@
                   "id": 120,
                   "mutability": "mutable",
                   "name": "_tokenId",
-                  "nameLocation": "4985:8:0",
+                  "nameLocation": "4989:8:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 123,
-                  "src": "4977:16:0",
+                  "src": "4981:16:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1750,7 +1750,7 @@
                     "id": 119,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4977:7:0",
+                    "src": "4981:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1759,16 +1759,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4948:46:0"
+              "src": "4952:46:0"
             },
             "returnParameters": {
               "id": 122,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "5003:0:0"
+              "src": "5007:0:0"
             },
             "scope": 134,
-            "src": "4923:81:0",
+            "src": "4927:81:0",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -1777,7 +1777,7 @@
             "documentation": {
               "id": 124,
               "nodeType": "StructuredDocumentation",
-              "src": "5012:584:0",
+              "src": "5016:584:0",
               "text": "@notice Transfer ownership of an NFT -- THE CALLER IS RESPONSIBLE\n  TO CONFIRM THAT `_to` IS CAPABLE OF RECEIVING NFTS OR ELSE\n  THEY MAY BE PERMANENTLY LOST\n @dev Throws unless `msg.sender` is the current owner, an authorized\n  operator, or the approved address for this NFT. Throws if `_from` is\n  not the current owner. Throws if `_to` is the zero address. Throws if\n  `_tokenId` is not a valid NFT.\n @param _from The current owner of the NFT\n @param _to The new owner\n @param _tokenId The NFT to transfer"
             },
             "functionSelector": "23b872dd",
@@ -1786,7 +1786,7 @@
             "kind": "function",
             "modifiers": [],
             "name": "transferFrom",
-            "nameLocation": "5611:12:0",
+            "nameLocation": "5615:12:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 131,
@@ -1797,10 +1797,10 @@
                   "id": 126,
                   "mutability": "mutable",
                   "name": "_from",
-                  "nameLocation": "5632:5:0",
+                  "nameLocation": "5636:5:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 133,
-                  "src": "5624:13:0",
+                  "src": "5628:13:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1811,7 +1811,7 @@
                     "id": 125,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5624:7:0",
+                    "src": "5628:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1825,10 +1825,10 @@
                   "id": 128,
                   "mutability": "mutable",
                   "name": "_to",
-                  "nameLocation": "5647:3:0",
+                  "nameLocation": "5651:3:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 133,
-                  "src": "5639:11:0",
+                  "src": "5643:11:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1839,7 +1839,7 @@
                     "id": 127,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5639:7:0",
+                    "src": "5643:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1853,10 +1853,10 @@
                   "id": 130,
                   "mutability": "mutable",
                   "name": "_tokenId",
-                  "nameLocation": "5660:8:0",
+                  "nameLocation": "5664:8:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 133,
-                  "src": "5652:16:0",
+                  "src": "5656:16:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1867,7 +1867,7 @@
                     "id": 129,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5652:7:0",
+                    "src": "5656:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1876,27 +1876,27 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "5623:46:0"
+              "src": "5627:46:0"
             },
             "returnParameters": {
               "id": 132,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "5678:0:0"
+              "src": "5682:0:0"
             },
             "scope": 134,
-            "src": "5602:77:0",
+            "src": "5606:77:0",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
         "scope": 135,
-        "src": "129:5553:0",
+        "src": "129:5557:0",
         "usedErrors": []
       }
     ],
-    "src": "33:5655:0"
+    "src": "33:5659:0"
   },
   "legacyAST": {
     "absolutePath": "/C/Users/Xyz Fiegalan/OneDrive/Desktop/My Projects/crypto-kitties-clone/Cloning-CryptoKitties/contracts/IERC721.sol",
@@ -2284,11 +2284,11 @@
                   "constant": false,
                   "id": 32,
                   "mutability": "mutable",
-                  "name": "owner",
-                  "nameLocation": "867:5:0",
+                  "name": "_owner",
+                  "nameLocation": "867:6:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 37,
-                  "src": "859:13:0",
+                  "src": "859:14:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2309,7 +2309,7 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "858:15:0"
+              "src": "858:16:0"
             },
             "returnParameters": {
               "id": 36,
@@ -2320,10 +2320,10 @@
                   "id": 35,
                   "mutability": "mutable",
                   "name": "balance",
-                  "nameLocation": "905:7:0",
+                  "nameLocation": "906:7:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 37,
-                  "src": "897:15:0",
+                  "src": "898:15:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2334,7 +2334,7 @@
                     "id": 34,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "897:7:0",
+                    "src": "898:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2343,10 +2343,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "896:17:0"
+              "src": "897:17:0"
             },
             "scope": 134,
-            "src": "840:74:0",
+            "src": "840:75:0",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -2358,13 +2358,13 @@
             "kind": "function",
             "modifiers": [],
             "name": "totalSupply",
-            "nameLocation": "1012:11:0",
+            "nameLocation": "1013:11:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 38,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1023:2:0"
+              "src": "1024:2:0"
             },
             "returnParameters": {
               "id": 41,
@@ -2375,10 +2375,10 @@
                   "id": 40,
                   "mutability": "mutable",
                   "name": "total",
-                  "nameLocation": "1057:5:0",
+                  "nameLocation": "1058:5:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 42,
-                  "src": "1049:13:0",
+                  "src": "1050:13:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2389,7 +2389,7 @@
                     "id": 39,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1049:7:0",
+                    "src": "1050:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2398,10 +2398,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1048:15:0"
+              "src": "1049:15:0"
             },
             "scope": 134,
-            "src": "1003:61:0",
+            "src": "1004:61:0",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -2413,13 +2413,13 @@
             "kind": "function",
             "modifiers": [],
             "name": "name",
-            "nameLocation": "1142:4:0",
+            "nameLocation": "1143:4:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 43,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1146:2:0"
+              "src": "1147:2:0"
             },
             "returnParameters": {
               "id": 46,
@@ -2430,10 +2430,10 @@
                   "id": 45,
                   "mutability": "mutable",
                   "name": "tokenName",
-                  "nameLocation": "1186:9:0",
+                  "nameLocation": "1187:9:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 47,
-                  "src": "1172:23:0",
+                  "src": "1173:23:0",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -2444,7 +2444,7 @@
                     "id": 44,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1172:6:0",
+                    "src": "1173:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -2453,10 +2453,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1171:25:0"
+              "src": "1172:25:0"
             },
             "scope": 134,
-            "src": "1133:64:0",
+            "src": "1134:64:0",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -2468,13 +2468,13 @@
             "kind": "function",
             "modifiers": [],
             "name": "symbol",
-            "nameLocation": "1277:6:0",
+            "nameLocation": "1278:6:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 48,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1283:2:0"
+              "src": "1284:2:0"
             },
             "returnParameters": {
               "id": 51,
@@ -2485,10 +2485,10 @@
                   "id": 50,
                   "mutability": "mutable",
                   "name": "tokenSymbol",
-                  "nameLocation": "1323:11:0",
+                  "nameLocation": "1324:11:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 52,
-                  "src": "1309:25:0",
+                  "src": "1310:25:0",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -2499,7 +2499,7 @@
                     "id": 49,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1309:6:0",
+                    "src": "1310:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -2508,10 +2508,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1308:27:0"
+              "src": "1309:27:0"
             },
             "scope": 134,
-            "src": "1268:68:0",
+            "src": "1269:68:0",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -2520,7 +2520,7 @@
             "documentation": {
               "id": 53,
               "nodeType": "StructuredDocumentation",
-              "src": "1344:137:0",
+              "src": "1345:137:0",
               "text": " @dev Returns the owner of the `tokenId` token.\n Requirements:\n - `tokenId` must exist."
             },
             "functionSelector": "6352211e",
@@ -2529,7 +2529,7 @@
             "kind": "function",
             "modifiers": [],
             "name": "ownerOf",
-            "nameLocation": "1496:7:0",
+            "nameLocation": "1497:7:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 56,
@@ -2539,11 +2539,11 @@
                   "constant": false,
                   "id": 55,
                   "mutability": "mutable",
-                  "name": "tokenId",
-                  "nameLocation": "1512:7:0",
+                  "name": "_tokenId",
+                  "nameLocation": "1513:8:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 60,
-                  "src": "1504:15:0",
+                  "src": "1505:16:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2554,7 +2554,7 @@
                     "id": 54,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1504:7:0",
+                    "src": "1505:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2563,7 +2563,7 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1503:17:0"
+              "src": "1504:18:0"
             },
             "returnParameters": {
               "id": 59,
@@ -2574,10 +2574,10 @@
                   "id": 58,
                   "mutability": "mutable",
                   "name": "owner",
-                  "nameLocation": "1552:5:0",
+                  "nameLocation": "1554:5:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 60,
-                  "src": "1544:13:0",
+                  "src": "1546:13:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2588,7 +2588,7 @@
                     "id": 57,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1544:7:0",
+                    "src": "1546:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2598,10 +2598,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1543:15:0"
+              "src": "1545:15:0"
             },
             "scope": 134,
-            "src": "1487:72:0",
+            "src": "1488:73:0",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -2613,7 +2613,7 @@
             "kind": "function",
             "modifiers": [],
             "name": "transfer",
-            "nameLocation": "1890:8:0",
+            "nameLocation": "1892:8:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 65,
@@ -2623,11 +2623,11 @@
                   "constant": false,
                   "id": 62,
                   "mutability": "mutable",
-                  "name": "to",
-                  "nameLocation": "1907:2:0",
+                  "name": "_to",
+                  "nameLocation": "1909:3:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 67,
-                  "src": "1899:10:0",
+                  "src": "1901:11:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2638,7 +2638,7 @@
                     "id": 61,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1899:7:0",
+                    "src": "1901:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2651,11 +2651,11 @@
                   "constant": false,
                   "id": 64,
                   "mutability": "mutable",
-                  "name": "tokenId",
-                  "nameLocation": "1919:7:0",
+                  "name": "_tokenId",
+                  "nameLocation": "1922:8:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 67,
-                  "src": "1911:15:0",
+                  "src": "1914:16:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2666,7 +2666,7 @@
                     "id": 63,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1911:7:0",
+                    "src": "1914:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2675,16 +2675,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1898:29:0"
+              "src": "1900:31:0"
             },
             "returnParameters": {
               "id": 66,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1936:0:0"
+              "src": "1940:0:0"
             },
             "scope": 134,
-            "src": "1881:56:0",
+            "src": "1883:58:0",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -2693,7 +2693,7 @@
             "documentation": {
               "id": 68,
               "nodeType": "StructuredDocumentation",
-              "src": "1945:356:0",
+              "src": "1949:356:0",
               "text": "@notice Change or reaffirm the approved address for an NFT\n @dev The zero address indicates there is no approved address.\n  Throws unless `msg.sender` is the current NFT owner, or an authorized\n  operator of the current owner.\n @param _approved The new approved NFT controller\n @param _tokenId The NFT to approve"
             },
             "functionSelector": "095ea7b3",
@@ -2702,7 +2702,7 @@
             "kind": "function",
             "modifiers": [],
             "name": "approve",
-            "nameLocation": "2316:7:0",
+            "nameLocation": "2320:7:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 73,
@@ -2713,10 +2713,10 @@
                   "id": 70,
                   "mutability": "mutable",
                   "name": "_approved",
-                  "nameLocation": "2332:9:0",
+                  "nameLocation": "2336:9:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 75,
-                  "src": "2324:17:0",
+                  "src": "2328:17:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2727,7 +2727,7 @@
                     "id": 69,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2324:7:0",
+                    "src": "2328:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2741,10 +2741,10 @@
                   "id": 72,
                   "mutability": "mutable",
                   "name": "_tokenId",
-                  "nameLocation": "2351:8:0",
+                  "nameLocation": "2355:8:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 75,
-                  "src": "2343:16:0",
+                  "src": "2347:16:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2755,7 +2755,7 @@
                     "id": 71,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2343:7:0",
+                    "src": "2347:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2764,16 +2764,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2323:37:0"
+              "src": "2327:37:0"
             },
             "returnParameters": {
               "id": 74,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2369:0:0"
+              "src": "2373:0:0"
             },
             "scope": 134,
-            "src": "2307:63:0",
+            "src": "2311:63:0",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -2782,7 +2782,7 @@
             "documentation": {
               "id": 76,
               "nodeType": "StructuredDocumentation",
-              "src": "2378:389:0",
+              "src": "2382:389:0",
               "text": "@notice Enable or disable approval for a third party (\"operator\") to manage\n  all of `msg.sender`'s assets\n @dev Emits the ApprovalForAll event. The contract MUST allow\n  multiple operators per owner.\n @param _operator Address to add to the set of authorized operators\n @param _approved True if the operator is approved, false to revoke approval"
             },
             "functionSelector": "a22cb465",
@@ -2791,7 +2791,7 @@
             "kind": "function",
             "modifiers": [],
             "name": "setApprovalForAll",
-            "nameLocation": "2782:17:0",
+            "nameLocation": "2786:17:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 81,
@@ -2802,10 +2802,10 @@
                   "id": 78,
                   "mutability": "mutable",
                   "name": "_operator",
-                  "nameLocation": "2808:9:0",
+                  "nameLocation": "2812:9:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 83,
-                  "src": "2800:17:0",
+                  "src": "2804:17:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2816,7 +2816,7 @@
                     "id": 77,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2800:7:0",
+                    "src": "2804:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2830,10 +2830,10 @@
                   "id": 80,
                   "mutability": "mutable",
                   "name": "_approved",
-                  "nameLocation": "2824:9:0",
+                  "nameLocation": "2828:9:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 83,
-                  "src": "2819:14:0",
+                  "src": "2823:14:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2844,7 +2844,7 @@
                     "id": 79,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2819:4:0",
+                    "src": "2823:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -2853,16 +2853,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2799:35:0"
+              "src": "2803:35:0"
             },
             "returnParameters": {
               "id": 82,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2843:0:0"
+              "src": "2847:0:0"
             },
             "scope": 134,
-            "src": "2773:71:0",
+            "src": "2777:71:0",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -2871,7 +2871,7 @@
             "documentation": {
               "id": 84,
               "nodeType": "StructuredDocumentation",
-              "src": "2852:263:0",
+              "src": "2856:263:0",
               "text": "@notice Get the approved address for a single NFT\n @dev Throws if `_tokenId` is not a valid NFT.\n @param _tokenId The NFT to find the approved address for\n @return The approved address for this NFT, or the zero address if there is none"
             },
             "functionSelector": "081812fc",
@@ -2880,7 +2880,7 @@
             "kind": "function",
             "modifiers": [],
             "name": "getApproved",
-            "nameLocation": "3130:11:0",
+            "nameLocation": "3134:11:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 87,
@@ -2891,10 +2891,10 @@
                   "id": 86,
                   "mutability": "mutable",
                   "name": "_tokenId",
-                  "nameLocation": "3150:8:0",
+                  "nameLocation": "3154:8:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 91,
-                  "src": "3142:16:0",
+                  "src": "3146:16:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2905,7 +2905,7 @@
                     "id": 85,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3142:7:0",
+                    "src": "3146:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2914,7 +2914,7 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3141:18:0"
+              "src": "3145:18:0"
             },
             "returnParameters": {
               "id": 90,
@@ -2928,7 +2928,7 @@
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
                   "scope": 91,
-                  "src": "3183:7:0",
+                  "src": "3187:7:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2939,7 +2939,7 @@
                     "id": 88,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3183:7:0",
+                    "src": "3187:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2949,10 +2949,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3182:9:0"
+              "src": "3186:9:0"
             },
             "scope": 134,
-            "src": "3121:71:0",
+            "src": "3125:71:0",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -2961,7 +2961,7 @@
             "documentation": {
               "id": 92,
               "nodeType": "StructuredDocumentation",
-              "src": "3200:293:0",
+              "src": "3204:293:0",
               "text": "@notice Query if an address is an authorized operator for another address\n @param _owner The address that owns the NFTs\n @param _operator The address that acts on behalf of the owner\n @return True if `_operator` is an approved operator for `_owner`, false otherwise"
             },
             "functionSelector": "e985e9c5",
@@ -2970,7 +2970,7 @@
             "kind": "function",
             "modifiers": [],
             "name": "isApprovedForAll",
-            "nameLocation": "3508:16:0",
+            "nameLocation": "3512:16:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 97,
@@ -2981,10 +2981,10 @@
                   "id": 94,
                   "mutability": "mutable",
                   "name": "_owner",
-                  "nameLocation": "3533:6:0",
+                  "nameLocation": "3537:6:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 101,
-                  "src": "3525:14:0",
+                  "src": "3529:14:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2995,7 +2995,7 @@
                     "id": 93,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3525:7:0",
+                    "src": "3529:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -3009,10 +3009,10 @@
                   "id": 96,
                   "mutability": "mutable",
                   "name": "_operator",
-                  "nameLocation": "3549:9:0",
+                  "nameLocation": "3553:9:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 101,
-                  "src": "3541:17:0",
+                  "src": "3545:17:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3023,7 +3023,7 @@
                     "id": 95,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3541:7:0",
+                    "src": "3545:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -3033,7 +3033,7 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3524:35:0"
+              "src": "3528:35:0"
             },
             "returnParameters": {
               "id": 100,
@@ -3047,7 +3047,7 @@
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
                   "scope": 101,
-                  "src": "3583:4:0",
+                  "src": "3587:4:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3058,7 +3058,7 @@
                     "id": 98,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3583:4:0",
+                    "src": "3587:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -3067,10 +3067,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3582:6:0"
+              "src": "3586:6:0"
             },
             "scope": 134,
-            "src": "3499:90:0",
+            "src": "3503:90:0",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -3079,7 +3079,7 @@
             "documentation": {
               "id": 102,
               "nodeType": "StructuredDocumentation",
-              "src": "3597:851:0",
+              "src": "3601:851:0",
               "text": "@notice Transfers the ownership of an NFT from one address to another address\n @dev Throws unless `msg.sender` is the current owner, an authorized\n  operator, or the approved address for this NFT. Throws if `_from` is\n  not the current owner. Throws if `_to` is the zero address. Throws if\n  `_tokenId` is not a valid NFT. When transfer is complete, this function\n  checks if `_to` is a smart contract (code size > 0). If so, it calls\n  `onERC721Received` on `_to` and throws if the return value is not\n  `bytes4(keccak256(\"onERC721Received(address,address,uint256,bytes)\"))`.\n @param _from The current owner of the NFT\n @param _to The new owner\n @param _tokenId The NFT to transfer\n @param data Additional data with no specified format, sent in call to `_to`"
             },
             "functionSelector": "b88d4fde",
@@ -3088,7 +3088,7 @@
             "kind": "function",
             "modifiers": [],
             "name": "safeTransferFrom",
-            "nameLocation": "4463:16:0",
+            "nameLocation": "4467:16:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 111,
@@ -3099,10 +3099,10 @@
                   "id": 104,
                   "mutability": "mutable",
                   "name": "_from",
-                  "nameLocation": "4488:5:0",
+                  "nameLocation": "4492:5:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 113,
-                  "src": "4480:13:0",
+                  "src": "4484:13:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3113,7 +3113,7 @@
                     "id": 103,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4480:7:0",
+                    "src": "4484:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -3127,10 +3127,10 @@
                   "id": 106,
                   "mutability": "mutable",
                   "name": "_to",
-                  "nameLocation": "4503:3:0",
+                  "nameLocation": "4507:3:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 113,
-                  "src": "4495:11:0",
+                  "src": "4499:11:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3141,7 +3141,7 @@
                     "id": 105,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4495:7:0",
+                    "src": "4499:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -3155,10 +3155,10 @@
                   "id": 108,
                   "mutability": "mutable",
                   "name": "_tokenId",
-                  "nameLocation": "4516:8:0",
+                  "nameLocation": "4520:8:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 113,
-                  "src": "4508:16:0",
+                  "src": "4512:16:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3169,7 +3169,7 @@
                     "id": 107,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4508:7:0",
+                    "src": "4512:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -3182,10 +3182,10 @@
                   "id": 110,
                   "mutability": "mutable",
                   "name": "data",
-                  "nameLocation": "4541:4:0",
+                  "nameLocation": "4545:4:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 113,
-                  "src": "4526:19:0",
+                  "src": "4530:19:0",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
@@ -3196,7 +3196,7 @@
                     "id": 109,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4526:5:0",
+                    "src": "4530:5:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
                       "typeString": "bytes"
@@ -3205,16 +3205,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4479:67:0"
+              "src": "4483:67:0"
             },
             "returnParameters": {
               "id": 112,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "4555:0:0"
+              "src": "4559:0:0"
             },
             "scope": 134,
-            "src": "4454:102:0",
+            "src": "4458:102:0",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -3223,7 +3223,7 @@
             "documentation": {
               "id": 114,
               "nodeType": "StructuredDocumentation",
-              "src": "4564:353:0",
+              "src": "4568:353:0",
               "text": "@notice Transfers the ownership of an NFT from one address to another address\n @dev This works identically to the other function with an extra data parameter,\n  except this function just sets data to \"\".\n @param _from The current owner of the NFT\n @param _to The new owner\n @param _tokenId The NFT to transfer"
             },
             "functionSelector": "42842e0e",
@@ -3232,7 +3232,7 @@
             "kind": "function",
             "modifiers": [],
             "name": "safeTransferFrom",
-            "nameLocation": "4932:16:0",
+            "nameLocation": "4936:16:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 121,
@@ -3243,10 +3243,10 @@
                   "id": 116,
                   "mutability": "mutable",
                   "name": "_from",
-                  "nameLocation": "4957:5:0",
+                  "nameLocation": "4961:5:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 123,
-                  "src": "4949:13:0",
+                  "src": "4953:13:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3257,7 +3257,7 @@
                     "id": 115,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4949:7:0",
+                    "src": "4953:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -3271,10 +3271,10 @@
                   "id": 118,
                   "mutability": "mutable",
                   "name": "_to",
-                  "nameLocation": "4972:3:0",
+                  "nameLocation": "4976:3:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 123,
-                  "src": "4964:11:0",
+                  "src": "4968:11:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3285,7 +3285,7 @@
                     "id": 117,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4964:7:0",
+                    "src": "4968:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -3299,10 +3299,10 @@
                   "id": 120,
                   "mutability": "mutable",
                   "name": "_tokenId",
-                  "nameLocation": "4985:8:0",
+                  "nameLocation": "4989:8:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 123,
-                  "src": "4977:16:0",
+                  "src": "4981:16:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3313,7 +3313,7 @@
                     "id": 119,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4977:7:0",
+                    "src": "4981:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -3322,16 +3322,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4948:46:0"
+              "src": "4952:46:0"
             },
             "returnParameters": {
               "id": 122,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "5003:0:0"
+              "src": "5007:0:0"
             },
             "scope": 134,
-            "src": "4923:81:0",
+            "src": "4927:81:0",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -3340,7 +3340,7 @@
             "documentation": {
               "id": 124,
               "nodeType": "StructuredDocumentation",
-              "src": "5012:584:0",
+              "src": "5016:584:0",
               "text": "@notice Transfer ownership of an NFT -- THE CALLER IS RESPONSIBLE\n  TO CONFIRM THAT `_to` IS CAPABLE OF RECEIVING NFTS OR ELSE\n  THEY MAY BE PERMANENTLY LOST\n @dev Throws unless `msg.sender` is the current owner, an authorized\n  operator, or the approved address for this NFT. Throws if `_from` is\n  not the current owner. Throws if `_to` is the zero address. Throws if\n  `_tokenId` is not a valid NFT.\n @param _from The current owner of the NFT\n @param _to The new owner\n @param _tokenId The NFT to transfer"
             },
             "functionSelector": "23b872dd",
@@ -3349,7 +3349,7 @@
             "kind": "function",
             "modifiers": [],
             "name": "transferFrom",
-            "nameLocation": "5611:12:0",
+            "nameLocation": "5615:12:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 131,
@@ -3360,10 +3360,10 @@
                   "id": 126,
                   "mutability": "mutable",
                   "name": "_from",
-                  "nameLocation": "5632:5:0",
+                  "nameLocation": "5636:5:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 133,
-                  "src": "5624:13:0",
+                  "src": "5628:13:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3374,7 +3374,7 @@
                     "id": 125,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5624:7:0",
+                    "src": "5628:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -3388,10 +3388,10 @@
                   "id": 128,
                   "mutability": "mutable",
                   "name": "_to",
-                  "nameLocation": "5647:3:0",
+                  "nameLocation": "5651:3:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 133,
-                  "src": "5639:11:0",
+                  "src": "5643:11:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3402,7 +3402,7 @@
                     "id": 127,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5639:7:0",
+                    "src": "5643:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -3416,10 +3416,10 @@
                   "id": 130,
                   "mutability": "mutable",
                   "name": "_tokenId",
-                  "nameLocation": "5660:8:0",
+                  "nameLocation": "5664:8:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 133,
-                  "src": "5652:16:0",
+                  "src": "5656:16:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3430,7 +3430,7 @@
                     "id": 129,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5652:7:0",
+                    "src": "5656:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -3439,27 +3439,27 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "5623:46:0"
+              "src": "5627:46:0"
             },
             "returnParameters": {
               "id": 132,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "5678:0:0"
+              "src": "5682:0:0"
             },
             "scope": 134,
-            "src": "5602:77:0",
+            "src": "5606:77:0",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
         "scope": 135,
-        "src": "129:5553:0",
+        "src": "129:5557:0",
         "usedErrors": []
       }
     ],
-    "src": "33:5655:0"
+    "src": "33:5659:0"
   },
   "compiler": {
     "name": "solc",
@@ -3467,7 +3467,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-07-02T04:41:01.587Z",
+  "updatedAt": "2021-07-02T08:34:27.677Z",
   "devdoc": {
     "details": "Required interface of an ERC721 compliant contract.",
     "events": {
