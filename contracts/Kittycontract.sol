@@ -248,11 +248,42 @@ contract Kittycontract is IERC721, Ownable{
         return size > 0;
     }
 
-    function _mixDna(uint256 _dadDna, uint256 _mumDna) internal pure returns (uint256) {
-        uint256 fromDad = _dadDna / 100000000;
-        uint256 fromMum = _mumDna % 100000000;
+    function _mixDna(uint256 _dadDna, uint256 _mumDna) internal view returns (uint256) {
+        uint256[8] memory geneArray;
 
-        uint256 kittyDna = (fromDad * 100000000) + fromMum;
-        return kittyDna;
+        //pseudo-random: Not used for betting and monetary stuff
+        //binary 8bit between 00000000 to 11111111
+        uint8 random = uint8( block.timestamp % 255);
+
+        //1, 2, 4, 8, 16, 32, 64, 128, loop through 8 times
+        //values of the 8 numbers above in binary
+        //00000001, 00000010, 00000100, 00001000,
+        //00010000, 00100000, 01000000, 10000000
+        //bitwise operator &
+        uint256 i = 1;
+        uint256 index = 7;
+        for(i = 1; i <= 128; i*=2) {
+            if(random & i != 0) {
+                geneArray[index] = uint8( _mumDna % 100); //last pair
+            } else {
+                geneArray[index] = uint8( _dadDna % 100);
+            }
+            //now remove last pair from dna
+            _mumDna /= 100;
+            _dadDna /= 100;
+
+            //reduce index to set position to previous (e.g. from 7 to 6)
+            index --;
+        }
+
+        //create DNA into a full number
+        uint256 newGene;
+        for (i = 0; i < 8; i++) {
+            newGene += geneArray[i]; //add first pair to mewGene
+            if(i != 7) { //to not add 2 zeroes after the last pair
+                newGene *= 100; //adds two zeroes (00), at the end of each pair
+            }
+        }
+        return newGene;
     }
 }
