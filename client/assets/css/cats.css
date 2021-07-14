@@ -7,17 +7,6 @@ html {
     box-sizing: border-box;
     overflow-y: scroll;
 }
-body {
-    background: #607d8b;
- 
-}
-
-.cat-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 4rem 0;
-}
 
 .cat__head {
     position: relative;
