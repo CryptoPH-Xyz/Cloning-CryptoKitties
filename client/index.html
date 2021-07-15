@@ -17,8 +17,21 @@
   <link rel="stylesheet" href="assets/css/xyz.css">
 </head>
   <body>
-    <div class="header-section section">
-        <div class="colored-container">
+    <div className="navbar" id="navbar">
+        <div className="nav">
+            <div className="nav-logo">
+                Crypto Cuties
+            </div>
+            <div className="nav-item">
+                <a href='#home' className="nav-menu-link">Home</a>
+                <a href='#catalogue' className="nav-menu-link">Catalogue</a>
+                <a href='#breed' className="nav-menu-link">Breed</a>
+                <a href='#marketplace' className="nav-menu-link">Marketplace</a>
+            </div>
+        </div>
+    </div>
+    <div class="header-section section colored-container" id="home">
+        <div class="container">
             <div class="header-text">
                 <div class="header-title">Crypto Cuties</div>
                 <div class="header-subtitle">"Forever Kitty Friends"</div>
@@ -152,7 +165,7 @@
                             </div>
                         </div>
                         <!-- Buttons 
-                        <div class="navbar justify-content-between">
+                        <div class="container justify-content-between">
                             <div>
                                 <button id="random" type="button" class="btn btn-outline-dark">Random Kitty</button>
                                 <button id="default" type="button" class="btn btn-outline-dark ml-2">Default Kitty</button>
@@ -161,6 +174,13 @@
                         </div> -->
                     </div>
                 </div>
+            </div>
+            <div class="container factory-buttons">
+                <div class="factory-button-outside">
+                    <div id="random" type="button" class="factory-button-left">Random Kitty</div>
+                    <div id="default" type="button" class="factory-button-left">Default Kitty</div>
+                </div>
+                <div id="create" type="button" class="factory-button-right">Create Kitty</div>
             </div>
         </div>
     </div>
