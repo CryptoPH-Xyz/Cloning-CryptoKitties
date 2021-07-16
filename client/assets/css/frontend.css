@@ -1,9 +1,10 @@
 .frontend {
-  height: 90vh;
-  padding-top: 105px;
   background: url("../images/banner.png") no-repeat;
   background-size: cover;
   background-position: bottom;
+  padding: 2rem 0;
+  border-radius: 0 0 25rem 25rem;
+  box-shadow: 0 0.5rem 0.5rem #aa1046;
 }
 
 .navbar-brand {
@@ -35,10 +36,9 @@
 
 .banner {
   background-color: rgba(36, 9, 19, 0.8);
-  margin-top: -30px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  border-radius: 10px;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 2rem;
   width: 82%;
   text-align: center;
   position: relative;
@@ -67,6 +67,13 @@ footer {
   border-radius: 10px;
   margin: 10px;
   transition: 0.8s ease-in-out;
+  box-shadow: 0px 16px 15px 0px #aa1046;
+  background: linear-gradient(
+    66.69deg,
+    #ee5c8f -3.61%,
+    #ffc5c2 60%,
+    #fa7c46 86.04%
+  );
 }
 
 .featureBox h4 {
@@ -75,7 +82,7 @@ footer {
 
 .featureBox:hover {
   border: 1px solid #ffffff;
-  box-shadow: 0px 16px 35px 0px rgba(0, 0, 2, 0.08);
+  transform: scale(1.05);
 }
 
 .egg {
