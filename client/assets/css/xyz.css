@@ -107,41 +107,23 @@ img {
   left: 0;
   z-index: var(--z-fixed);
   background-color: var(--container-color);
-}
-
-.nav {
   height: 3.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 0 4rem;
   box-shadow: 0 1px 5px var(--shadow-color);
-  padding: 0.25rem 4rem 0.25rem;
-}
-
-.nav-avatar {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 1px 1px 3px var(--shadow-color);
-}
-
-.nav-avatar:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-  transition: 0.3s;
 }
 
 .nav-menu-link {
   color: var(--text-color);
   font-size: 1rem;
   padding: 0.25rem 0.75rem;
+  text-decoration: none;
 }
 
 .nav-menu-link:hover {
   background: linear-gradient(66.69deg, #ff357d -3.61%, #ff6f33 86.04%);
   border-radius: 1rem;
   color: var(--text-color-white);
+  text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {
