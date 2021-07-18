@@ -262,8 +262,36 @@
     </div>
 
     <div class="catalogue-section section" id="catalogue">
-        <h1>Catalogue</h1>
+        <div class="header" align="center">
+
+            <div class="container">
+    
+                <h2 class="menu-title">Catalogue</h2>
+    
+            </div>
+        </div>
+        
+    
+        <div class="container middleBox">
+            <div class="row" id="catsDiv">
+    
+            </div>
+    
+            <div class="row" id="ownersCatsDiv ">
+    
+            </div>
+    
+    
+        </div>
     </div>
+    <script>
+        // when page load create the catalog
+    $(document).ready(function () {
+        setTimeout(() => {
+            contractCatalog()
+        }, 1000)
+    });
+    </script>
 
     <div class="breed-section section" id="breed">
         <div class="container breedBox" align="center">
