@@ -17,7 +17,7 @@ var defaultDNA = {
 
 // when page load
 $( document ).ready(function() {
-  $('#dnabody').html(defaultDNA.headColor);
+  $('#dnabody').html(defaultDNA.headcolor);
   $('#dnamouth').html(defaultDNA.mouthColor);
   $('#dnaeyes').html(defaultDNA.eyesColor);
   $('#dnaears').html(defaultDNA.earsColor);
@@ -53,7 +53,7 @@ function renderCat(dna){
   $('#bodycolor').val(dna.headcolor) //sets slider value
 
   mouthColor(colors[dna.mouthColor],dna.mouthColor)
-  $('#bodycolor').val(dna.mouthColor)
+  $('#mouthcolor').val(dna.mouthColor)
 
   eyeColor(colors[dna.eyesColor],dna.eyesColor)
   $('#eyescolor').val(dna.eyesColor)
