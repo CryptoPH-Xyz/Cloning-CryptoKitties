@@ -2,7 +2,7 @@ var web3 = new Web3(Web3.givenProvider);
 
 var instance;
 var user;
-var contractAddress = "0x9C06fA8d1cA9C3652b14E3A3e0f86B5921e3fB1C"; //enter contact address here
+var contractAddress = "0x711441C154ABce1F726DF488a199e782B8Cb7184"; //enter contact address here
 
 $(document).ready(function(){
     window.ethereum.enable().then(function(accounts){
