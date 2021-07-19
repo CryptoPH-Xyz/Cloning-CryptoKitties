@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.0;
 
-import "./Kittycontract.sol";
+import "./KittyContract.sol";
 import "../node_modules/@openzeppelin/contracts/access/Ownable.sol";
 
 /*
@@ -48,7 +48,7 @@ interface IKittyMarketPlace {
      * Requirement: There can only be one active offer for a token at a time.
      * Requirement: Marketplace contract (this) needs to be an approved operator when the offer is created.
      */
-    function setOffer(uint256 _price, uint256 _tokenId) external;
+    function createOffer(uint256 _price, uint256 _tokenId) external;
 
     /**
      * Removes an existing offer.
