@@ -20,16 +20,22 @@ contract Marketplace is Ownable, IKittyMarketPlace {
     Offer[] offers;
     mapping(uint256 => Offer) kittyForSale;
 
+    // event MarketTransaction(string TxType, address owner, uint256 tokenId);
+
     function setKittyContract(address _kittyContractAddress)
-        external
+        public
         override
         onlyOwner
     {
         _kittyContract = Kittycontract(_kittyContractAddress);
     }
 
+    constructor(address _kittyContractAddress) public {
+        setKittyContract(_kittyContractAddress);
+    }
+
     function getOffer(uint256 _tokenId)
-        external
+        public
         view
         override
         returns (
@@ -44,26 +50,37 @@ contract Marketplace is Ownable, IKittyMarketPlace {
             kittyForSale[_tokenId].active == true,
             "Kitty is not for Sale!"
         );
-        seller = kittyForSale[_tokenId].seller;
-        price = kittyForSale[_tokenId].price;
-        index = kittyForSale[_tokenId].index;
-        tokenId = kittyForSale[_tokenId].tokenId;
-        active = kittyForSale[_tokenId].active;
+
+        return (
+            kittyForSale[_tokenId].seller,
+            kittyForSale[_tokenId].price,
+            kittyForSale[_tokenId].index,
+            kittyForSale[_tokenId].tokenId,
+            kittyForSale[_tokenId].active
+        );
     }
 
     function getAllTokenOnSale()
-        external
+        public
         view
         override
         returns (uint256[] memory listOfOffers)
     {
-        uint256 i;
-        for (i = 0; i < offers.length; i++) {
-            if (kittyForSale[i].active == true) {
-                listOfOffers[i] += kittyForSale[i].tokenId;
+        uint256 totalOffers = offers.length;
+
+        if (totalOffers == 0) {
+            return new uint256[](0);
+        } else {
+            uint256[] memory result = new uint256[](totalOffers);
+            uint256 offerId;
+
+            for (offerId = 0; offerId < totalOffers; offerId++) {
+                if (offers[offerId].active == true) {
+                    result[offerId] = offers[offerId].tokenId;
+                }
             }
+            return result;
         }
-        return listOfOffers;
     }
 
     function createOffer(uint256 _price, uint256 _tokenId) external override {
