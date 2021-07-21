@@ -72,12 +72,10 @@ contract Marketplace is Ownable, IKittyMarketPlace {
             return new uint256[](0);
         } else {
             uint256[] memory result = new uint256[](totalOffers);
-            uint256 offerId;
+            uint256 i;
 
-            for (offerId = 0; offerId < totalOffers; offerId++) {
-                if (offers[offerId].active == true) {
-                    result[offerId] = offers[offerId].tokenId;
-                }
+            for (i = 0; i < totalOffers; i++) {
+                result[i] = offers[i].tokenId;
             }
             return result;
         }
@@ -93,7 +91,7 @@ contract Marketplace is Ownable, IKittyMarketPlace {
             "Cannot offer same Kitty twice"
         );
         require(
-            address(this) == _kittyContract.getApproved(_tokenId),
+            _kittyContract.isApprovedForAll(msg.sender, address(this)),
             "This contract is not an approved operator"
         );
         _createOffer(msg.sender, _price, _tokenId);
@@ -118,13 +116,20 @@ contract Marketplace is Ownable, IKittyMarketPlace {
             msg.value == kittyForSale[_tokenId].price,
             "Insufficient amount"
         );
+        //remove offer first before sending transactions to avoid reentrancy attacks
+        _removeOffer(kittyForSale[_tokenId].seller, _tokenId);
+
+        if (kittyForSale[_tokenId].price > 0) {
+            kittyForSale[_tokenId].seller.transfer(
+                kittyForSale[_tokenId].price
+            );
+        }
         _kittyContract.safeTransferFrom(
             kittyForSale[_tokenId].seller,
             msg.sender,
             _tokenId,
             ""
         );
-        _removeOffer(kittyForSale[_tokenId].seller, _tokenId);
         emit MarketTransaction("Buy", kittyForSale[_tokenId].seller, _tokenId);
     }
 
